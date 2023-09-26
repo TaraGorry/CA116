@@ -1,0 +1,20 @@
+Standard input consists of a single three-digit integer, that
+is an integer in the range 100 to 999.
+
+Write a python script named the-three-digits.py which writes
+each of the three digits of that number (one digit per line)
+to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+number = int(input())
+
+first_num = number % 10
+second_num = ((number % 10) - first_num) // 10
+third_num = (number - (number % 100)) // 100
+
+print(third_num)
+print(second_num)
+print(thirs_num)

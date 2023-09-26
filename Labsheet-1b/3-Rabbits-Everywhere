@@ -1,0 +1,18 @@
+Assume that a rabbit population doubles every year.
+
+Standard input consists of two integers, one per line:
+- the first is an initial rabbit population
+- the second is a number of years
+
+Write a python script named rabbits-everywhere.py which writes
+the final rabbit population after the indicated number of years
+to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+population = int(input())
+year = int(input())
+
+print(population * (2 ** year))

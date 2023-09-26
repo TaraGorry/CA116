@@ -1,0 +1,39 @@
+Standard input consists of exactly ten integers, one per line.
+Write a python script named add-ten-numbers.py which writes
+the sum of those numbers to standard output.
+
+#!/usr/bin/env python3
+
+total = 0
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+print(total)

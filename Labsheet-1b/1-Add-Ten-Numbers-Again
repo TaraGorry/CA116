@@ -1,0 +1,41 @@
+Repeat the previous task; this time name the script add-ten-numbers-again.py
+
+Your solution must use at most two variable names.
+
+Solution:
+
+#!/usr/bin/env python3
+
+total = 0
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+n = int(input())
+total = total + n
+
+print(total)

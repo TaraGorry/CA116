@@ -1,0 +1,42 @@
+Standard input consists of exactly ten integers, one per line
+
+Write a python script named add-ten-odd-numbers.py which writes
+the sum of just the odd numbers to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+total = 0
+
+n = int(input())
+total = (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+n = int(input())
+total = total + (n * (n % 2))
+
+print(total)

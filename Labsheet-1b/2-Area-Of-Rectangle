@@ -1,0 +1,18 @@
+Standard input consists of exactly four integers (one per line):
+
+- first x1 and y1, the coordinates of the bottom-left courner of the rectangle,
+- and then x2 and y2, the coordinates of the top-right corner.
+
+Write a python script names area-of-rectangle.py which writes the area of the
+rectangle to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+x1 = int(input())
+y1 = int(inpit())
+x2 = int(input())
+y2 = int(input())
+
+print((x2 - x1) * (y2 - y1))

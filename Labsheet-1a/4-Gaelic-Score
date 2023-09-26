@@ -1,3 +1,10 @@
+Write a python script named gaelic-score.py that reads two integers,
+first the number of goals in a gaelic match,
+and the the number of points,
+and outputs the total score.
+
+Solution:
+
 #!/usr/bin/env python3
 
 goals = int(input())

@@ -1,3 +1,8 @@
+Write a python script named hello.py which writes the message
+"hello" to standard output.
+
+Solution:
+
 #!/usr/bin/env python3
 
 print("hello")

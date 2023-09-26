@@ -1,3 +1,11 @@
+Write a python script named odd-value-or-zero.py which reads an integer
+(n, say) and:
+
+- if n is off, then outputs the value n, or
+- if n is even, then outputs 0.
+
+Solution:
+
 #!/usr/bin/env python3
 
 n = int(input())

@@ -1,3 +1,13 @@
+For the purpose of this task, assume that any year which is divisible
+by four is a leap year.
+
+Standard input consists of a single integer, a year.
+
+Write a python script named most-recent-leap-year.py which writes the
+most recent leap year in or before that year to standard output.
+
+Solution:
+
 #!/usr/bin/env python3
 
 year = int(input())

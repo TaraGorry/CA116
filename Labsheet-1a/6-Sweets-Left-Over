@@ -1,3 +1,14 @@
+Assume that there are ten children in a group.
+
+Write a python script named sweets-left-over.py which reads a number
+of sweets(an integer) and outputs the number of sweets left over after
+the sweets have been given to the children.
+
+Each child recieves the most sweets possible such that each child recieves
+the same number of sweets.
+
+Solution:
+
 #!/usr/bin/env python3
 
 n - int(input())

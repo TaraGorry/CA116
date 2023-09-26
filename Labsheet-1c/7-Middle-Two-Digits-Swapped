@@ -1,0 +1,15 @@
+Standard input consists of a single six-digit number.
+
+This time the order of the middle two digits must be swapped.
+
+Name your script middle-two-digits-swapped.py
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+n = n // 100 % 100
+
+print((n % 10) * 10 + n // 10)

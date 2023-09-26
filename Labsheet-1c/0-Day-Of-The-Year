@@ -1,0 +1,24 @@
+A strange year:
+Imagine an alternative world in which a year consists of 12 months,
+as normal, but every month consists of ecactly 30 days.
+Months are numbers from 1 to 12, and days from 1 to 30.
+A week has seven days, as usual.
+Week days start on a Monday, and are numbered 1 to 7.
+
+Task:
+
+Standard input consists of two integers, one per line:
+A month number and a day-of-the-month number.
+
+Write a python script named day-of-the-year.py which writes the day of the year to standard output.
+
+The days of the year are numbers from 1 to 360.
+
+Solution:
+
+#!/usr/bin/env python3
+
+month = int(input())
+day = int(input())
+
+print(day + ((month - 1) * 30))

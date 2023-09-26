@@ -1,0 +1,15 @@
+Standard input consists of exactly three digits, one per line.
+Take these to be, respectively, the first, second and third digits 
+of a three-digit number.
+
+Write a python script named three-digit-number.py which writes that number to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+digit_one = int(input())
+digit_two = int(input())
+digit_three = int(input())
+
+print((digit_one * 100) + (digit_two * 10) + (digit_three))

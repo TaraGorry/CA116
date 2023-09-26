@@ -1,0 +1,15 @@
+Standard input consists of exactly three binary digits, one per line.
+
+Take these to be, respectively, the first, second and third digits of a three-digit binary number.
+
+Write a python script named three-digit-binary-number.py which writes that number to standard output in decimal.
+
+Solution:
+
+#!/usr/bin/env python3
+
+first = int(input())
+second = int(input())
+third = int(input())
+
+print(third * (2 ** 0) + second * (2 ** 1) + first * (2 ** 2))

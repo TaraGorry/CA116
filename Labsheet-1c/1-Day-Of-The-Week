@@ -1,0 +1,23 @@
+Imagine an alternative world in which a year consists of 12 months,
+as normal, but every month consists of exactly 30 days.
+Months are numbered from 1 to 12, and days from 1 to 30.
+A week has seven days, as usual.
+Week days start on a Monday, and are numbered 1 to 7.
+
+Standard input consists of a month number and a day-of-the-month
+number, one per line.
+
+Further, assume that the first day of the first month of the year
+is a Monday.
+
+Write a python script named day-of-the-week.py which writes the day
+of the week to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+month = int(input())
+day = int(input())
+
+print((((day - 1) + (month - 1) * 30) % 7 ) + 1))

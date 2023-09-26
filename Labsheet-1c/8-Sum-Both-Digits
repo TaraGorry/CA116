@@ -1,0 +1,12 @@
+Standard input consists of a single two-digit integer.
+
+Write a python script named sum-both-digits.py which writes
+the sum of the two digits to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+print((n // 10) + (n % 10))

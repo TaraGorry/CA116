@@ -1,0 +1,11 @@
+Standard input consists of a single six-digit number.
+
+Write a python script named middle-two-digits.py which writes
+only the middle two digits to standard output.
+
+Solution:
+#!/usr/bin/env python3
+
+n = int(input())
+
+print(n // 100 % 100)

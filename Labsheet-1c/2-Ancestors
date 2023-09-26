@@ -1,0 +1,18 @@
+One generation back you have your parents; You have two of those.
+
+Two generations back you have your grandparents; you have four of those.
+
+And so on.
+
+Task:
+Standard input consists of a single positive interger, a number of generations.
+
+Write a python script nameb ancestor-count.py which outputs the number of ancestors you have that many generations back.
+
+Solution:
+
+#!/usr/bin/env python3
+
+generations = int(input())
+
+print(2 ** generations)

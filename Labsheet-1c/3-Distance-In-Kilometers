@@ -1,0 +1,20 @@
+Standard input consists of a single integer, a distance measured
+in meters.
+
+Write a python script named distance-in-kilometers.py which writes
+the corresponding distance in kilometers to standard output.
+
+Rounding:
+- Round fractional kilometers of strictly less than 500m down to
+the nearest kilometers, and greater than that up.
+- For example, 7499m becomes 7km whereas 7500 becomes 8km.
+
+Your solution may not use the python built-in function round().
+
+Solution:
+
+#!/usr/bin/env python3
+
+meters = int(input())
+
+print((meters // 1000) + ((meters % 1000) // 500))

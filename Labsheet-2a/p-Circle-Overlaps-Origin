@@ -1,0 +1,17 @@
+Standard input consists of three integers, one per line. Take these
+to be x, y and r, respectively the centre point of a circle and the
+radius of that circle.
+
+Write a python script named circle-overlaps-origin.py which outputs 
+True if the origin is strictly contained within the circle, and False
+otherwise.
+
+Solution:
+
+#!/usr/bin/env python3
+
+x = int(input())
+y = int(input())
+r = int(input())
+
+print((x * x) + (y * y) < r * r)

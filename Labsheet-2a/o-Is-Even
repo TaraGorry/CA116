@@ -1,0 +1,30 @@
+Standard input consists of a single integer, n say.
+
+Write a python script named is-even.py which outputs True if 
+n is even and False otherwise.
+
+To make this task tricky...
+
+Your solution may not use %, the modulus operator (and you may
+only use elements of python which have been covered in the module
+thus far).
+
+Solution:
+
+#!/usr/bin/env python3
+
+num = int(input())
+
+i = 0
+if num < 0:
+    num = num * -1
+
+even = True
+while i < num:
+    if even is True:
+        even = False
+    else:
+        even = True
+    i = i + 1
+
+print(even)

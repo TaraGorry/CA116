@@ -1,0 +1,12 @@
+Standard input consists of a single line of text.
+
+Write a python script named echo-string.py which copies
+that line of text from standard input to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+print(s)

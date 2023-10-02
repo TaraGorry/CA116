@@ -1,0 +1,18 @@
+Standard input consists of three integers, one per line.
+Call these a, b and c, respectively.
+
+Write a python script named picker.py which outputs:
+  - a if c is even, and
+  - b if c is odd.
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+result = (c % 2 == 0) * a + (c % 2 == 1) * b
+
+print(result)

@@ -1,0 +1,16 @@
+Standard input consists of a single positive integer.
+
+Take that number to be the radius of a circle.
+
+Write a python script named circle-area.py which outputs
+the area of a circle.
+
+Take pi to be exactly 3.141.
+
+Solution:
+
+#!/usr/bin/env python3
+
+r = int(input())
+
+print(3.141 * (r * r))

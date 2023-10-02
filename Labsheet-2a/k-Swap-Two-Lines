@@ -1,0 +1,14 @@
+Standard input consists of exactly two lines of text.
+
+Write a python script named swap-two-lines.py which outputs 
+those same two lines, but in the opposite order.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = input()
+
+print(t)
+print(s)

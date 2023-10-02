@@ -1,0 +1,24 @@
+Background:
+Consider the number 9876.
+Here, we will define:
+ - 6 to be the 0th digit,
+ - 7 to be the 1st digit,
+ - 8 to be the 2nd digit, and
+ - 9 to be the 3rd digit.
+In other words, we're counting the digits backwards, and starting from 0.
+
+Task:
+Standard input consists of two positive integers, one per line.
+
+Take n to be the first integer, and p to be the second.
+
+Write a python script named pick-digit.py which outputs the p-th digit of n.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = str(input())
+p = int(input())
+
+print(n[(len(n) - 1) - p])

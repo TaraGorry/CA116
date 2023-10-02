@@ -1,0 +1,14 @@
+Standard input consists of a single positive integer, n say.
+
+As before, n is the length of the side of the square.
+
+Write a python script named square-perimeter.py which outputs
+the perimeter of the square.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+print(n * 4)

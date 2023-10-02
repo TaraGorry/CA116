@@ -1,0 +1,14 @@
+Standard input consists of a single positive integer, n say.
+
+n is the length of the side of a square.
+
+Write a python script named square-area.py which outputs the area
+of a square.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+print(n * n)

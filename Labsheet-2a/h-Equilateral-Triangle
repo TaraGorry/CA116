@@ -1,0 +1,15 @@
+Standard input consists of exactly three positive integers, one
+per line, these being the lengths of the side of a triangle.
+
+Write a python script named equilateral-triangle.py which outputs
+True if the triangle is an equilateral triangle, and False otherwise.
+
+Solution:
+
+#!/usr/bin/env python3
+
+side_1 = int(input())
+side_2 = int(input())
+side_3 = int(input())
+
+print(side_1 == side_2 and side_1 == side_3 and side_2 == side_3)

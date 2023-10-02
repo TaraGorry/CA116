@@ -1,0 +1,13 @@
+Standard input consists of exactly two lines of text.
+
+Write a python script named join-two-lines.py which outputs those
+two lines on a single line (separated by a space).
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = input()
+
+print(s + " " + t)

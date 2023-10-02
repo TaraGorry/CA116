@@ -1,0 +1,12 @@
+Standard input consists of a single line of text, (s say).
+
+Write a python script named string-length.py writes the length
+of s to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+print(len(s))

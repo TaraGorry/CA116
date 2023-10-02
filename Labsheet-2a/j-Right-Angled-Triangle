@@ -1,0 +1,16 @@
+Standard input consists of exactly three positve integers:
+first the length of the longest side of a triangle, and then the lengths of the other two sides.
+
+Each integer is on a separate line.
+
+Write a python script named right-angled-triangle.py which outputs True if the triangle is a right-angled triangle, and False otherwise.
+
+Solution:
+
+#!/usr/bin/env python3
+
+c = int(input())
+a = int(input())
+b = int(input())
+
+print((c * c) == (a * a) + (b * b))

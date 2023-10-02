@@ -1,0 +1,11 @@
+Standard input consists of a single positive integer, year say. This is a year.
+
+Write a python script named leap-year.py which outputs a single Boolean: True if year is a leap year, and False otherwise.
+
+Solution:
+
+#!/usr/bin/env python3
+
+year = int(input())
+
+print((year % 400 == 0) or (year % 4 == 0 and year % 100 != 0))

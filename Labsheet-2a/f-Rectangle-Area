@@ -1,0 +1,14 @@
+Standard input consists of two positive integers, one per line.
+
+These are respectively the length and width of a rectangel.
+
+Write a python script named rectangle-area.py which outputs the area of the rectangle.
+
+Solution:
+
+#!/usr/bin/env python3
+
+length = int(input())
+width = int(input())
+
+print(width * length)

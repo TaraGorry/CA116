@@ -1,0 +1,14 @@
+Standard input consists of exactly two lines, each containing
+a single positive integer.
+
+Write a python script named how-many-digits.py which writes the
+number of digits contained in the two numbers to standard output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = input()
+
+print(len(s + t))

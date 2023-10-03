@@ -1,0 +1,20 @@
+Standard inpput consists of exactly three lines of text.
+
+Write a python script named longer-of-three-strings.py which 
+outputs only the longer of the three strings.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = input()
+r = input()
+
+if (len(s) > len(t)) and (len(s) > len(r)):
+  print(s)
+elif (len(t) > len(s)) and (len(t) > len(r)):
+  print(t)
+else:
+  print(r)
+  

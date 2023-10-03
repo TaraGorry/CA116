@@ -1,0 +1,41 @@
+Background:
+Boddy mass index (or BMI) is a measure used to assess whether a person
+is underweight, overweight, obese or just right.
+
+Specifically, given a person's weight (in kg) and their height (in cm), then their BMI is:
+ - weight / (height * height) * 10000
+
+According to BMI:
+  - if your BMI is less than 18.5, your weight falls within the "underweight" range;
+  - if your BMI is 18.5 to 24.9, it falls within the "normal" range;
+  - if your BMI is 25.0 to 29.9, it falls within the "overweight" range;
+  - if your BMI is 30.0 or higher, it falls within the "obese" range.
+
+Task:
+Standard input consists of two positive integers (one per line): 
+first a weight (in kg), then a height (in cm)
+
+Write a python script named bmi-calculator.py which writes the corresponding BMI category to standard output.
+
+The output from your script will be one of the four words:
+  - "underweight"
+  - "normal"
+  - "overweight"
+  - "obese"
+
+The foyr catagories are defined above.
+
+Solution:
+#!/usr/bin/env python3
+
+weight = int(input())
+height = int(input())
+
+if (weight / (height * height) * 10000) <= 18.5:
+  print("underweight")
+elif (weight / (height * height) * 10000) <= 25:
+  print("normal")
+elif (weight / (height * height) * 10000) <= 30:
+  print("overweight")
+else:
+  print("obese")

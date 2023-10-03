@@ -1,0 +1,24 @@
+Backround:
+A prime number is a positive integer greater than or equal to 2 which
+is only divisible by 1 and itself.
+
+Task:
+Standard input consists of a small positive integer, n say; n is
+strictly less than twenty.
+
+Write a python script named small-primes.py which outputs either
+the message "prime" or the message "not prime" depending upon whether
+n is prime or not.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+if (n == 2) or (n == 3):
+  print("prime")
+elif (n % 2 == 0) or (n % 3 == 0) or (n == 1):
+  print("not prime")
+else:
+  print("prime")

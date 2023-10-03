@@ -1,0 +1,17 @@
+Standard input consists of a single integer value in the range 
+0 to 6 (inclusive), where 0 is Monday.
+
+Write a python script named weekend.py which outputs the message
+"weekend" if the day is Saturday or Sunday, and the message "weekday"
+otherwise.
+
+Solution:
+
+#!/usr/bin/env python3
+
+day = int(input())
+
+if day == 5 or day == 6:
+  print("weekend")
+else:
+  print("weekday")

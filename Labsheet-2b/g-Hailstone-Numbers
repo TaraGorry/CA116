@@ -1,0 +1,18 @@
+Background:
+The Hailstone sequence is a sequence of positive integers.
+
+Task:
+Standard input consists of a single positive integer, n say.
+
+Write a python script named next-hailstone.py which outputs just the term following n in the Hailstone sequence.
+
+Solution:
+#!/usr/bin/env python3
+
+n = int(input())
+
+if n * ((n + 1) % 2) == n:
+  print(n // 2)
+elif n * (n % 2) == n:
+  print((3 * n) + 1)
+  

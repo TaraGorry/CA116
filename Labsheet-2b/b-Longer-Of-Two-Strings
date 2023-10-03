@@ -1,0 +1,17 @@
+Standard input consists of exactly two lines of text.
+
+Write a python script named longer-of-two-strings.py which outputs
+only the longer of the two strings.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = input()
+
+if len(s) > len (t):
+  print(s)
+else:
+  print(t)
+  

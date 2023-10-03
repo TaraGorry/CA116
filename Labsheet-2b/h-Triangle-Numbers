@@ -1,0 +1,35 @@
+Background:
+Take a, b and c to be the putative lengths of the sides of a 
+triangle.
+
+Some values of a, b and c can form triangles; 
+for example, 3, 4 and 5.
+
+Some other values of a, b and c cannot form a triangle;
+for example 1, 2 and 100.
+
+In the latter case, one of the sides is too long for the other
+two, they cannot possibly reach each other to form a triangle.
+
+In fact, even 3, 6 and 3 cannot form a triangle; 
+the best they can do is form a line.
+
+Task:
+Standard input consists of three positive integers, a, b and c,
+say, the putative lengths of the side of a triangle, one per line.
+
+Write a python script named is-triangle.py which outputs either
+the message "yes" or the message "no" depending upon whether a,
+b and c can be lengths of the side of a triangle, or not.
+
+Solution:
+#!/usr/bin/env python3
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+if ((a + b) > c) and ((c + b) > a) and ((a + c) > b):
+  print("yes")
+else:
+  print("no")

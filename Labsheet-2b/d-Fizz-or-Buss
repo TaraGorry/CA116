@@ -1,0 +1,30 @@
+Background:
+Fizz-buzz is a children's counting game in which:
+  - any number which is divisible by 3 is replaced with "fizz"
+  - any number which is divisible by 5 is replaced with "buzz"
+
+However, numbers which are divisible by both 3 and 5 are replaced
+with "fizz-buzz".
+
+For all other numbers, just the number itself is said.
+
+Task:
+Standard input consists of a single integer.
+
+Write a python script named fizz-or-buzz.py which outputs the 
+appropriate fizz-buzz output for that integer.
+
+Solution:
+
+#!/usr/bin/env python3
+
+number = int(input())
+
+if (number % 3 == 0) and (number % 5 == 0):
+  print("fizz-buzz")
+elif number % 3 == 0:
+  print("fizz")
+elif number % 5 == 0:
+  print("buzz")
+else:
+  print(number)

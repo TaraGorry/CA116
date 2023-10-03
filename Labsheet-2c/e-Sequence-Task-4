@@ -1,0 +1,9 @@
+Sequence:
+1 2 4 8 16 32 64 128 ...
+
+Name the file sequence-4.py
+
+Solution:
+#!/usr/bin/env python3
+
+x = x * 2

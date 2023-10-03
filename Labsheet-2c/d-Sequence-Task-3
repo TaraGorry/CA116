@@ -1,0 +1,9 @@
+Sequence:
+5 -5 5 -5 5 -5 5 -5 5 -5 ...
+
+Name the file sequence-3.py
+
+Solution:
+#!/usr/bin/env python3
+
+x = x * (-1)

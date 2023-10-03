@@ -1,0 +1,9 @@
+Sequence:
+-1 2 -3 4 -5 6 -7 8 -9 10 ...
+
+Name the file sequence-8.py
+
+Solution:
+#!/usr/bin/env python3
+
+x = ((x > 0) * (x + 1) + (x < 0) * (x - 1)) * -1

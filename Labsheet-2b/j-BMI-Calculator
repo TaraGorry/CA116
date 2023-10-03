@@ -23,7 +23,7 @@ The output from your script will be one of the four words:
   - "overweight"
   - "obese"
 
-The foyr catagories are defined above.
+The four catagories are defined above.
 
 Solution:
 #!/usr/bin/env python3

@@ -1,0 +1,16 @@
+Sequence:
+0 2 4 6 8 10 12 14 ...
+
+Name file sequence-1.py.
+
+Solution will look like this:
+#!/usr/bin/env python3
+
+x = INTEGER_EXPRESSION
+
+(replacing INTEGER_EXPRESSION with a suitable integer expression).
+
+Solution:
+#!/usr/bin/env python3
+
+x = x + 2

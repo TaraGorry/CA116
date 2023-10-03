@@ -1,0 +1,9 @@
+Sequence:
+0 2 4 0 2 4 0 2 4 0 ...
+
+Name the file sequence-6.py
+
+Solution:
+#!/usr/bin/env python3
+
+x = (x + 2) % 6

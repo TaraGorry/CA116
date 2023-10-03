@@ -1,0 +1,7 @@
+Sequence:
+100 101 102 100 101 102 100 101 102 100 ...
+
+Name the file sequence-7.py
+
+Solution:
+x = (x % 3) + 100

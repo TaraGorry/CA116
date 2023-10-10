@@ -1,0 +1,23 @@
+Task:
+Standard input consists of two positive integers, n and m respectively.
+
+Write a python script named hailstone-sequence-1.py which outputs
+the n terms of the Hailstone sequence beginning with m.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+m = int(input())
+
+i = 0
+while i < n:
+  if i == 0:
+    m = m
+  elif m % 2 == 1:
+    m = (3 * m) + 1
+  else:
+    m = m // 2
+  print(m)
+  i = i + 1

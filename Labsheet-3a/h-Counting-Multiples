@@ -1,0 +1,16 @@
+Task:
+Write a python script named counting-multiples.py which first reads 
+a positive integer n and then a second positive integer m, and outputs 
+the first n natural numbers which are multiples of m.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+m = int(input())
+
+i = 0
+while i < n:
+  print(i * m + m)
+  i = i + 1

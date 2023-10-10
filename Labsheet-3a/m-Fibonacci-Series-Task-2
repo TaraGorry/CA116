@@ -1,0 +1,20 @@
+Task:
+This task is different to all of the other tasks.
+In this task, you do not know how many times your loop will iterate before beginning.
+Therefore, our do-something-n-times loop pattern is not appropriate for this task.
+
+Write a python script named fib-less-than-n.py which reads a positive integer n from standard input and outputs the sequence of Fibonacci numbers which are less than n, one per line.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+if n <= 0:
+  print(n)
+else:
+  a, b = 0, 1
+  while a < n:
+    print(a)
+    a, b = b, a + b

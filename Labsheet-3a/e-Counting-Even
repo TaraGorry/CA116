@@ -1,0 +1,19 @@
+Task:
+Write a script named counting-even.py which reads a positive 
+integer n from standard input and outputs the first n even natural 
+numbers, one per line.
+
+(Take the natural numbers to be 1, 2, 3, 4, and so on).
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+count = 0
+i = 0
+while i < n:
+  print(count + 2)
+  i = i + 1
+  count = count + 2

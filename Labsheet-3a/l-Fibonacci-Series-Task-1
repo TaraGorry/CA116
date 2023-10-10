@@ -1,0 +1,25 @@
+Task:
+The Fibonacci series proceeds as follows:
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+Each new term is the sum of the perceding two terms.
+
+
+Write a python script named fib-n.py which reads positive integer n from standard input and outputs the first n terms of the Fibonacci series, one per line.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+if n <= 0:
+  print(n)
+else:
+  a, b = 0, 1
+  i = 0
+  while i < n:
+    print(a)
+    a, b = b, a + b
+    i += 1

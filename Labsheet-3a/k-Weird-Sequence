@@ -1,0 +1,19 @@
+Task:
+From the solution to the Sequence Task 8, from labsheet 2c,
+try this...
+
+Write a python script named weird-sequence.py which reads a positive
+integer n from standard input and outputs the first n trems of the 
+sequence in the example, one per line.
+
+Solution:
+
+#!usr/bin/env python3
+
+n = int(input())
+
+i = 0
+while i < n:
+  sequence = ((-1) ** i) * (i)
+  print(sequence)
+  i += 1

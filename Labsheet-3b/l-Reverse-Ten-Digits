@@ -1,0 +1,26 @@
+Task:
+Standard input consists of a sequence of ten digits, one per line.
+Write a python script named reverse-ten-digits.py which outputs
+those same ten digits, but in reverse order.
+
+Solution:
+
+#!/usr/bin/env python3
+
+reversed_number = 0
+
+i = 0
+while i < 10:
+  digit = int(input())
+  if i == 0:
+    reversed_number = digit
+  else:
+    reversed_number = reversed_number * 10 + digit
+  i = i + 1
+
+i = 10
+while i > 0:
+  digit = reversed_number % 10
+  print(digit)
+  reversed_number = reversed_number // 10
+  i = i + 1

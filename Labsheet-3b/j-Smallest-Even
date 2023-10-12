@@ -1,0 +1,20 @@
+Task:
+Write a python script named ten-smallest-even.py which outputs 
+only the smallest even number encountered.
+
+You should assume that the first number is even.
+
+Solution:
+
+#!/usr/bin/env python3
+
+smallest = 0
+
+i = 0
+while i < 10:
+  n = int(input())
+  if i == 0 or smallest > n and n % 2 == 0:
+    smallest = n
+  i = i + 1
+
+print(smallest)

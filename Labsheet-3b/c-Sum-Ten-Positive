@@ -1,0 +1,18 @@
+Task:
+Write a python script named ten-sum-positive.py which outputs
+the sum of only the positive integers encountered.
+
+Solution:
+
+#!/usr/bin/env python3
+
+total = 0
+
+i = 0
+while i < 10:
+  n = int(input())
+  if n > 10:
+    total = total + n
+  i = i + 1
+
+print(total)

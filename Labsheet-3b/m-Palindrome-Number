@@ -1,0 +1,36 @@
+A palindrome number is any positive integer whose digits are 
+in the same order when you read in either direction.
+
+Examples of palindrome numbers include: 1, 22, 121, 3443 and 
+71234543217.
+
+Task:
+Standard input consists of a single positive integer n, say.
+
+Write a python script named palindrome-number.py which writes 
+either the message "yes" or the message "no" to standard output 
+to indicate whether n is a palindrome number or not.
+
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+if n < 0:
+  print("no")
+else:
+  original_n = n
+  reversed_n = 0
+  num_digits = 0
+
+  while n > 0:
+    num_digits += 1
+    n, digits = divmod(n, 10)
+    reversed_n = reversed_n * 1- + digits
+
+  if original_n == reversed_n:
+    print("yes")
+  else:
+    print("no")

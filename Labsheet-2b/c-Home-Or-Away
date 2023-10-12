@@ -1,0 +1,25 @@
+Standard input consists of two integers, one per line: these are
+respectively the scores of the home and the away teams in a football
+(soccer) match.
+
+Write a python script named home-win.py which outputs exactly one 
+of the following three messages, as appropriate:
+
+ - "Home win"
+ - "Draw"
+ - "Away win"
+
+Solution:
+
+#!/usr/bin/env python3
+
+home = int(input())
+away = int(input())
+
+if home > away:
+  print("Home win")
+elif home == away:
+  print("Draw")
+else:
+  print("Away win")
+

@@ -17,4 +17,3 @@ elif (len(t) > len(s)) and (len(t) > len(r)):
   print(t)
 else:
   print(r)
-  

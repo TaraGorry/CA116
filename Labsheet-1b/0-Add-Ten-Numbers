@@ -1,6 +1,9 @@
 Standard input consists of exactly ten integers, one per line.
+
 Write a python script named add-ten-numbers.py which writes
 the sum of those numbers to standard output.
+
+Solution:
 
 #!/usr/bin/env python3
 

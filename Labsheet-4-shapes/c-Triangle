@@ -1,0 +1,19 @@
+For each of the following teaks, read a positive n from standard input, and write a python script which writes the indicated shape to standard output.
+
+To avoid some difficulties, you should assume n is odd.
+
+In each example, the input is 7.
+
+Task:
+Name your script shape-triangle.py.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+i = 0
+while i < n:
+  print(("*") * (i + 1))
+  i = i + 1

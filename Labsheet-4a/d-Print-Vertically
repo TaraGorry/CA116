@@ -1,0 +1,16 @@
+Task:
+Standard input consists of a single line of text.
+
+Write a python script named print-vertically.py which writes the 
+characters of the text to standard output individually, one per line.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s):
+  print(s[i])
+  i = i + 1

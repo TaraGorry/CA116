@@ -1,0 +1,25 @@
+Background:
+A suffix is any sequence of characters appearing at the end 
+of a string.
+
+For example, "stein" is a suffix of "Einstein".
+
+A string of length n has n suffixes, including the string itself.
+
+Task:
+Standard input consists of a single line of text.
+
+Write a python script named all-suffixes.py which writes each 
+suffix of that text to standard output, one per line. (from longest 
+to shortest).
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s):
+  print(s[i:])
+  i = i + 1

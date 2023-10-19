@@ -1,0 +1,16 @@
+Task:
+Standard input consists of a sequence of exactly ten non-negitave 
+integers.
+
+Write a python script named histogram-1.py to output this data as 
+a histogram.
+
+Solution:
+
+#!/usr/bin/env python3
+
+i = 0
+while i < 10:
+  n = int(input())
+  print(n * "*")
+  i = i + 1

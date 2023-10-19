@@ -1,0 +1,22 @@
+Task:
+Standard input consists of a single non-empty line of text.
+
+Write a python script named swap-first-and-last.py which writes 
+that text to standard putput with its first and last characters 
+swapped.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = ""
+
+while i < len(s):
+  x = s[0]
+  y = s[1:(len(s) - 1)]
+  z = s[len(s) - 1]
+  t = z + y + x
+  i = i + 1
+
+print(t)

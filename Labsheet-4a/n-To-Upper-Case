@@ -1,0 +1,23 @@
+Task:
+Standard input consists of a single line of text.
+
+Write a python script named to-upper-case.py which writes that text 
+to standard output, but with all of the lower-case letters 
+converted to the corresponding upper-case letters.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = ""
+
+i = 0
+while i < len(s):
+  if "a" <= s[i] and s[i] <= "z":
+    t = t + chr(ord(s[i]) - ord("a") + ord("A"))
+  else:
+    t = t + s[i]
+  i = i + 1
+
+print(t)

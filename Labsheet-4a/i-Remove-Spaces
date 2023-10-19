@@ -1,0 +1,16 @@
+Task:
+Standard input consists of a single line of text.
+
+Write a python script named remove-spaces.py which writes that 
+text to standard output, but with all of the space characters 
+removed.
+
+Solution:
+
+#!/usr/bin/env python3
+
+input_text = input()
+
+output_text = input_text.replace(" ", "")
+
+print(output_text)

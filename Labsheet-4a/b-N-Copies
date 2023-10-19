@@ -1,0 +1,15 @@
+Task:
+Standard input consists of a single line of text (s, say) followed 
+on the next line by a non-negitave integer (n, say).
+
+Write a python script named n-copies.py which outputs n copies of 
+s on a single line (with no intervening space characters).
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+n = int(input())
+
+print(s * n)

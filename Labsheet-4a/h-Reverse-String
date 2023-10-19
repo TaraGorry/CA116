@@ -1,0 +1,19 @@
+Task:
+Standard input consists of a single line of text.
+
+Write a python script named reverse-string.py which writes that 
+same tect to standard output, but reversed.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = ""
+
+i = 0
+while i < len(s):
+  t = t + s[len(s) - i - 1]
+  i = i + 1
+
+print(t)

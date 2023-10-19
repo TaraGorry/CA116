@@ -1,0 +1,20 @@
+Task:
+Repeat the previous task.
+
+This tome, standard input begins with a line containing an integer, (n, say).
+
+There then follow n additional lines, each containing a non-negative integer (these being the data for your histogram).
+
+Name your python script histogram-2.py.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+i = 0
+while i < n:
+  m = int(input())
+  print(m * "*")
+  i = i + 1

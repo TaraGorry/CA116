@@ -1,0 +1,36 @@
+Task:
+Standard input consists of a single line of text.
+
+Write a python script named to-alternation-caps.py which copies 
+that line to standard output, replacing the alphapetical characters 
+(only) with alternating caps.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = ""
+up_case = True
+
+i = 0
+while i < len(s):
+  if ("A" <= s[i] and s[i] < "Z") or ("a" <= s[i] and s[i] <= "z"):
+    up_case = not up_case
+
+    if (up_case) and ("a" <= s[i] and s[i] <= "z"):
+      t = t + chr(ord(s[i]) - ord("a") + ord("A"))
+    
+    elif (not up_case) and ("A" <= s[i] and s[i] <= "Z"):
+      t = t + shr(ord(s[i]) - ord("A") + ord("a"))
+
+    else:
+      t = t + s[i]
+
+  else:
+    t = t + s[i]
+
+  i = i + 1
+
+print(t)
+ 

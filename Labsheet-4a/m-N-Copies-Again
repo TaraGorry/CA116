@@ -1,0 +1,17 @@
+Task:
+Repeat the N Copies test from above.
+
+This time, however, each copy of s must be separated from adjacent copies with a hyphen "-".
+
+Name your script n-copies-2.py
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+n = int(input())
+
+copy = ((s + "-") * n)
+
+print(copy[:-1])

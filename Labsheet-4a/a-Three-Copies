@@ -1,0 +1,12 @@
+Task:
+Write a python script named three-copies.py which reads a single 
+line of text from standard input (s, say) and outputs three 
+copies of s on a single line (with no intervening space characters).
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+print(s * 3)

@@ -1,0 +1,17 @@
+Task:
+Standard input consists of a single line of text. All of the characters 
+in the text are digits.
+
+Write a python script named histogram-3.py whoch putputs a histogram 
+of the digits within the text.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = input()
+
+i = 0
+while i < len(n):
+  print("*" * int(n[i]))
+  i = i + 1

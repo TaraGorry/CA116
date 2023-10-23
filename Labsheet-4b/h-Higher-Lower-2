@@ -1,0 +1,37 @@
+Task:
+Write a python script named higher-lower-0.py which is the same 
+as the previous task, except that it reads an unknown number of 
+integers.
+
+Your script should stop when it encounters a 0.
+
+Solution:
+
+#!/usr/bin/env python3
+
+prev = int(input())
+
+if prev != 0:
+  curr = int(input())
+  results = ""
+  
+  if curr != 0:
+    
+    while curr != 0:
+      
+      if results != "":
+        results = results + "\n"
+      
+      if prev < curr:
+        results = results + "higher"
+      
+      elif prev > curr:
+        results = results + "lower"
+      
+      else:
+        results = results + "equal"
+
+      prev = curr
+      curr = int(input())
+    
+    print(results)

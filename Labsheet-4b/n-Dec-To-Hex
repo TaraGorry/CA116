@@ -1,0 +1,20 @@
+Background:
+Hexadecimal (or "hex") is a base-16 number system in which we 
+use the letters a through f to represent the base-16 "digits" 
+10 through 15.
+
+Task:
+Standard input consists of a single decimal number.
+
+Write a python script named dec-to-hex.py which outputs that 
+decimal number as a hexadecimal number.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = int(input())
+
+hex = hex(s)[2:]
+
+print(hex)

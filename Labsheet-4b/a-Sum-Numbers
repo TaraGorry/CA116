@@ -1,0 +1,18 @@
+Task:
+Write a python script named sum-five.py which reads exactly 
+five integerd from standard input and outputs the sum of those 
+integers.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = 5
+total = 0
+
+i = 0
+while i < n:
+  total = total + int(input())
+  i = i + 1
+
+print(total)

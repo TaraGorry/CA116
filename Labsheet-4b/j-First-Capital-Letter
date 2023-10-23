@@ -1,0 +1,21 @@
+Task:
+Standard input consists of a single line of text.
+
+Write a python script named first-capital-letter.py which writes 
+the position of the first capital letter in the text to standard output.
+
+You should assume that a capital letter does indeed exist within the text.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s):
+  if "A" < s[i] and s[i] <= "Z":
+    print(i)
+    i = len(s)
+  else:
+    i = i + 1

@@ -1,0 +1,21 @@
+Task:
+Write a python script named sum-five-abs-0.py which is the same 
+as that for the previous task, except that it reads an unknown 
+number of integers.
+
+Your script should stop when it encounters a 0.
+
+Solution:
+
+#!/usr/bin/env python3
+
+total = 0
+
+n = int(input())
+while n != 0:
+  if n < 0:
+    n = n * (-1)
+  total = total + n
+  n = int(input())
+
+print(total)

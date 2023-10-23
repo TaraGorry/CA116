@@ -1,0 +1,19 @@
+Task:
+Standard input consists of a single positive binary number.
+
+Write a python script named bin-to-dec.py which outputs that 
+binary number in its decimal representation.
+
+Solution:
+
+#!/usr/bin/env python3
+
+total = 0
+
+i = 0
+while i < len(s):
+  dec = (2 ** i) * int(s[len(s) - i - 1])
+  total = total + int(dec)
+  i = i + 1
+
+print(total)

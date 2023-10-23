@@ -1,0 +1,25 @@
+Task:
+Write a python script named sum-five-pos-neg.py which reads 
+exactly five integers from standard input and outputs exactly two numbers:
+- the sum of the negative numbers encountered
+- the sum of the positive numbers encountered
+.. on the same line.
+
+Solution:
+
+#!/usr/bin/env python3
+
+pos = 0
+neg = 0
+
+i = 0
+while i < 5:
+  num = int(input())
+  if num > 0:
+    pos = pos + num
+  
+  if num < 0:
+    neg = neg + num
+  i = i + 1
+
+print(neg, pos)

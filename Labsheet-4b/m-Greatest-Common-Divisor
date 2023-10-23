@@ -1,0 +1,29 @@
+Background:
+The greatest common divisor (GCD) of two positive integers is 
+the largest positive integer which divides both without a remainder.
+
+For example, the GCD of 75 and 30 is 15.
+
+Euclid's Algorithm:
+  - Start with two positive integers a and b.
+  
+  - Repeat the following steps:
+    - the new a is the old b
+    - the new b is the remainder after dividing the old a by the old b.
+  
+  - Stop when b is 0; the final value of a is the answer.
+
+Task:
+Write a python script named gcd.py which reads two positive integers and outputs their greatest common divisor.
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = int(input())
+b = int(input())
+
+while b:
+  a, b = b, a % b
+
+print(a)

@@ -1,0 +1,37 @@
+Task:
+Write a python script named higher-lower.py which:
+
+  - first reads exactly one integer from standard input (10, in the example below),
+
+  - then reads exactly five further integers from standard input and
+
+  - for each of those five values, outputs the message "higher", "lower" or "equal" depending upon whether the new value is higher than, lower than or equal to the immediately preceding value.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = 5
+result = ""
+prev = int(input())
+
+i = 0
+while i < n:
+  
+  if i != 0:
+    results = results + "\n"
+  curr = int(input())
+  
+  if prev < curr:
+    results = results + "higher"
+  
+  elif prev > curr:
+    results = results + "lower"
+  
+  else:
+    results = results + "equal"
+
+  prev = curr
+  i = i + 1
+
+print(result)

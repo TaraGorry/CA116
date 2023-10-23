@@ -1,0 +1,23 @@
+Task:
+Write a python script named sum-five-0.py which is the same as 
+that for the previous task, except that it reads an unknown number 
+of integers.
+
+Your script should stop when it encounters a line containing only 
+0.
+
+(The "0" is the file name above and the example below is the number 
+zero, not the letter "Oh").
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+total = 0
+
+while n != 0:
+  total = total + n
+  n = int(input())
+
+print(total)

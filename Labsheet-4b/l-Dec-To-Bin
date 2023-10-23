@@ -1,0 +1,15 @@
+Task:
+Standard input consists of a single decimal number.
+
+Write a python script named dec-to-bin.py which outputs that 
+decimal number in its binary representation.
+
+Solution:
+
+#!/usr/bin/env python3
+
+dec = int(input())
+
+bin = bin(dec[2:])
+
+print(bin)

@@ -1,0 +1,24 @@
+Background:
+The musical notes are usually represented by the first seven letters 
+of the alphabet, so a through to g.
+
+Task:
+Standard input consists of a single line of text(without any upper-case letters).
+
+Write a python script named first-musical-note.py which writes the first character of that text which is a musical note to standard output.
+
+You should assume that a musical-note character does indeed occur within the text.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s):
+  if "a" <= s[i] and s[i] <= "g":
+    print(s[i])
+    i = len(s)
+  else:
+    i = i + 1

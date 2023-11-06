@@ -17,7 +17,6 @@ Example output:
 
 ** If you have a list a containing the lines as required, then 
 write your output as follows:
-
 print(a) **
 
 Solution:

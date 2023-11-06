@@ -1,0 +1,44 @@
+Background:
+grep is the name of a standard Unix utility.
+
+grep filter lines of text, including in the output only those 
+lines which contain some pattern.
+
+The unusual-sounding name stands for global regular expression point.
+
+Task:
+Standard input consists of a sequence of lines, terminated by a line containing only the text "end".
+
+Further, assume a single command-line argument, a pattern.
+
+Write a python script named grep-lines.py which copies the input lines to standard output, but incluging in the output only those lines which contain pattern.
+
+Example invocation:
+$ python3 grep-lines.py Mary
+
+Example input:
+Mary had a little lamb,
+it's fleece was white as snow.
+And everywhere that Mary went
+the lamb was sure to go.
+end
+
+Example output:
+Mary had a little lamb,
+And everywhere that Mary went
+
+** This is a linear-search problem **
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+
+pattern = sys.argv[1]
+
+line = input()
+while line != "end":
+  if pattern in line:
+    print(line)
+  line = input()

@@ -1,0 +1,43 @@
+Task:
+Standard input consists of a sequence of integers, one per line, 
+terminated by a line containing only the text "end", and followed 
+then by one further integer, n say.
+
+Write a python script named add-something.py which, for each integer 
+m in the original sequence, writes m + n to standard output.
+
+Example input:
+10
+5
+2
+"end"
+3
+
+Example output:
+13
+8
+5
+
+** Again here, you cannot know the first line of output until you have read the last line of input.
+Therefore, you must store each number in a list.
+To read the input, read the integers storing them in a list until you encounter the text "end" - as before - and the simply read one more line:
+a = []
+# Read integers into (a) until encountering the text "end", as before.
+n = int(input()) # Read the final integer, n.
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+m = input()
+while m != "end":
+  a.append(m)
+  m = input()
+
+n = input()
+i = 0
+while i < len(a):
+  total = int(a[i]) + int(n)
+  print(total)
+  i = i + 1

@@ -1,0 +1,35 @@
+Task:
+Standard input consists of a sequence of integers, one per line, 
+terminated by a line containing only the text "end".
+
+Write a python script named lines-to-list-ints.py which writes 
+those lines to standard output as a list literal.
+
+Example input:
+5
+2
+8
+end
+
+Example output:
+[5, 2, 8]
+
+** Each line of input either an integer or the text "end".
+Because, each line might contain the text "end", you will have 
+to read each line as a string with input(), and convert that 
+string to an integer with int() only once you know that it does 
+not contain the text "end".
+Again, if you have a list a containing the integers as required 
+the write your output as follows:
+print(a) **
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+s = input()
+while s != "end":
+  a.append(int(s))
+  s = input()
+print(a)

@@ -1,0 +1,29 @@
+Task:
+The command-line arguments consists of a sequence of integers.
+
+Write a python script named add-args.py which writes just the 
+sum of those integers to standard output.
+
+Example invocation:
+$ python3 add-args.py 1 2 3
+
+Example output:
+6
+
+** sys.argv is always a list of strings.
+You will have to convert each element to and integer with int() in order to sum them. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+
+args = sys.argv[1:]
+
+total = 0
+i = 0
+while i < len(args):
+  total = total + int(args[i])
+  i = i + 1
+print(total)

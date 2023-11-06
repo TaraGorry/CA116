@@ -6,9 +6,6 @@ of integers.
 Your script should stop when it encounters a line containing only 
 0.
 
-(The "0" is the file name above and the example below is the number 
-zero, not the letter "Oh").
-
 Solution:
 
 #!/usr/bin/env python3

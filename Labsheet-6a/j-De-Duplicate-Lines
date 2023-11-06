@@ -1,0 +1,38 @@
+Task:
+Standard input consists of a sequence of lines, terminated by 
+a line containing only the text "end".
+
+Write a python script named de-dup-lines.py which writes only 
+the first occurrence of each line to standard output.
+
+Subsequent duplicates are skipped.
+
+Example input:
+red herring
+blue
+red herring
+green
+green
+end
+
+Example output:
+red herring
+blue
+green
+
+** Store the lines which you have already seen in a list and, 
+for each new line encountered, first cheak whether the new line 
+occurs in that list.
+This is a list and linear-search problem. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+lines_seen = []
+line = input()
+while line != "end":
+  if lines_seen.count(line) == 0:
+    print(line)
+    lines_seen.append(line)
+  line = input()

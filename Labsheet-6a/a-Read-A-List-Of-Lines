@@ -1,0 +1,32 @@
+Task:
+Standard input consists of a sequence of lines, terminated by 
+a line containing only the text "end".
+
+Write a python script named lines-to-list.py which writes those 
+lines to standard output as a list literal.
+
+Example input:
+Nobody
+expects
+the
+Spanish Inquisition!
+end
+
+Example output:
+["Nobody", "expects", "the", "Spanish Inquisition!"]
+
+** If you have a list a containing the lines as required, then 
+write your output as follows:
+
+print(a) **
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+s = input()
+while s != "end":
+  a.append(s)
+  s = input
+print(a)

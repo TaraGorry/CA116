@@ -1,0 +1,67 @@
+Task:
+Standard input consists of a sequence of digits, one per line, 
+terminated by a line containing only the text "end".
+
+Write a python script named histogram.py which writes a histogram 
+of the frequency of occurrence of each digit to standard output.
+
+Example input:
+0
+9
+6
+2
+3
+0
+8
+4
+2
+1
+8
+4
+9
+8
+3
+1
+6
+8
+9
+7
+4
+end
+
+Example output:
+0 **
+1 **
+2 **
+3 **
+4 ***
+5
+6 **
+7 *
+8 ****
+9 ***
+
+** There were four eights in the example input, but just one 
+seven and no fives at all; hence the number of asterisks in 
+each line of the histogram.
+The histogram is on its side. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+counts = [0] * 10
+line = input()
+while line != "end":
+  digit = int(line)
+  counts[digit] += 1
+  line = input()
+
+digit = 0
+while digit < 10:
+  count = counts[digit]
+  if count > 0:
+    print(f"{digit} {'*' * count}")
+  else:
+    print(f"{digit}" + " ")
+  digit += 1

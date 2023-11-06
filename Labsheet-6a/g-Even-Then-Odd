@@ -1,0 +1,54 @@
+Task:
+Standard input consists of a sequence of integers, one per line, 
+terminated by a line containing only the text "end".
+
+Write a python script named even-then-off.py which writes first 
+all of the even numbers encountered to standard output (one per line), 
+and the all of the odd numbers.
+
+Example input:
+3
+7
+2
+5
+6
+end
+
+Example output:
+2
+6
+3
+7
+5
+
+** You can print the even numbers out as you encounter them.
+You cannot print the odd numbers as you go along, because you 
+may yet encounter another even number.
+Therefore you will have to save the odd numbers in a list, and 
+print them out after you have read all of the input. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+odd = []
+even = []
+
+s = input()
+while s != "end":
+  num = int(s)
+  if num % 2 == 0:
+    even.append(num)
+  else:
+    odd.append(num)
+  s = input()
+
+i = 0
+while i < len(even):
+  print(even[i])
+  i = i + 1
+
+i = 0
+while i < len(odd):
+  print(odd[i])
+  i = i + 1

@@ -1,0 +1,43 @@
+Task:
+Standard input consists of a sequence of lines, terminated by 
+a line containing only the text "end".
+
+Write a python script named lable-lines.py which writes each 
+line labelled with its position in the sequence and the total 
+number of lines in the sequence to standard output.
+
+Example input:
+Nobody
+expects
+theSpanish Inquisition!
+end
+
+Example output:
+0 4 Nobody
+1 4 expects
+2 4 the
+3 4 Spanish Inquisition!
+
+** The first column in the output is the position of the line 
+in the list, the second column is the total number of lines 
+(4, in this case).
+You cannot know the total number of lines until you have read 
+all of the lines.
+Therefore you cannot produce the first line of output until you 
+have read the last line of the input.
+Therefore, you will have to store the lines in a list. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+s = input()
+while s != "end":
+  a.append(s)
+  s = input()
+
+i = 0
+while i < len(a):
+  print(i, len(a), a[i])
+  i = i + 1

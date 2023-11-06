@@ -1,0 +1,20 @@
+Task:
+Standard input consists of a single line of text s.
+
+Write a python script named first-capital.py which writes the 
+first upper-case letter in s and it's position to standard output.
+
+Your script should produce no output if s does not contain a 
+capital letter.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s) and (s[i] < "A" or "Z" < s[i]):
+  i = i + 1
+if i < len(s):
+  print(s[i], i)

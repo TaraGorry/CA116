@@ -1,0 +1,28 @@
+Task:
+Standard input consists of a single line of text s.
+
+Write a python script named first-acronym.py which writes the 
+first acronym in s and its position to standard output.
+
+Your script should produce no output if s does not contain an 
+acronym.
+
+Take an acronym to be any contiguous sequence of one or more 
+upper-case letters.
+
+You must include all contiguous capital letters in your output.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s) and (s[i] < "A" or "Z" < s[i]):
+  i = i + 1
+if i < len(s):
+  j = i
+  while j < len(s) and ("A" <= s[j] and s[j] <= "Z"):
+    j = j + 1
+  print(s[i:j], i)

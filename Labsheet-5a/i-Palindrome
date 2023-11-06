@@ -1,0 +1,29 @@
+Background:
+"A palindrome is a word or text which reads the same backwards 
+and forwards."
+
+For example: "rotator"
+
+Task:
+Standard input consists of a single line of text containing a 
+word w.
+
+Write a python script named palindrome-string.py which writes 
+the message "palindrome" to standard output if w is a palindrome, 
+and produces no output otherwise.
+
+Solution:
+
+#!/usr/bin/env python3
+
+w = input()
+
+i = 0
+while i < len(w) and (w[i] < "a" and "z" < w[i]):
+  i = i + 1
+if i < len(w):
+  j = i
+  while j < len(w) and (w[j] == w[len(w) - 1 - j]):
+    j = j + 1
+  if j == len(w):
+    print("palindrome")

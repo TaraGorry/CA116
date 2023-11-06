@@ -1,0 +1,35 @@
+Task:
+Standard input consists of a single line of text, that text being 
+a floating-point number f.
+
+Write a python script named parse-float.py which writes the integer 
+part of f and the fractional part of f to standard output, each 
+on its own line.
+
+Assume that neither the integer part nor the fractional part of f 
+is ever empty.
+
+The following words may not appear in your solutuon: "int", "float" and "split".
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s) and (s[i] < "0" or "9" < s[i]):
+  i = i + 1
+if i < len(s):
+  j = i
+  while j < len(s) and ("0" <= s[j] and s[j] <= "9"):
+    j = j + 1
+    k = j
+  print(s[i:j])
+while k < len(s) and (s[k] < "0" and "9" < s[k]):
+  k = k + 1
+if i < len(s):
+  n = k
+  while n < len(s) and ("0" <= s[n] and s[n] <= "9"):
+    n = n + 1
+print(s[k:n])

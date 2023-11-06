@@ -1,0 +1,38 @@
+Task:
+Standard input consists of a number.
+
+That number:
+  - May be positive or negative
+  - May be an integer of a floating-point number
+  - And if it is a floating-point number, then the integer part 
+    or the fractional part may be empyt (but not both).
+
+There are no whitespace characters in the input.
+
+Write a python script named format-float.py which writes the 
+same number to standard output formatted as a floating-point 
+number in which both the integer part and thr fractional part 
+are present.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+is_negative = False
+if s[0] == "-":
+  is_negative = True
+  s = s[1:]
+
+if "." not in s:
+  s = s + ".0"
+elif s[0] == ".":
+  s = "0" + s
+elif s[-1] == ".":
+  s = s + "0"
+
+if is_negative:
+  s = "-" + s
+
+print(s)

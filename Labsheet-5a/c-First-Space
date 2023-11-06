@@ -1,0 +1,22 @@
+Task:
+Standard input consists of a single line of text s.
+
+Write a python script named first-space.py which writes just the 
+position of the first space character in s to standard output.
+
+Your script should output "-1" if s does not contain a space 
+character.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s) and (s[i] != " "):
+  i = i + 1
+if i < len(s):
+  print(i)
+else:
+  print("-1")

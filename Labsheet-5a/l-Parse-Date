@@ -1,0 +1,39 @@
+Task:
+Standard input consists of a single line of text, a date.
+
+Write a python script named parse-date.py which writes the date 
+in the format required.
+
+Example input:
+Tuesday 23rd October, 2018
+
+Example output:
+October 23rd, 2018 (Tuesday)
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s) and (s[i] != " "):
+  i = i + 1
+if i < len(s):
+  j = i
+  while i < len(s) and ("a" <= s[j] or s[j] <= "A"):
+    j = j + 1
+    k = j
+    while k < len(s) and (s[k] != " "):
+      k = k + 1
+    if i < len(s):
+      n = k
+      while n < len(s) and ("a" <= s[n] or s[n] <= "A"):
+        n = n + 1
+
+day = s[0:i]
+number = s[i + 1:j - 1]
+month = s[j:k - 1]
+year = s[k + 1:n]
+
+print(month + " " + number + "," + " " + year + " " + "(" + day + ")")

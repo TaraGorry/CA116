@@ -1,0 +1,32 @@
+Task:
+Standard input consists of a single line of text s.
+
+Write a python script named second-number.py which writes the 
+second number in s and its position to standard output.
+
+Your script should produce no output if s does not contain at 
+lease two numbers.
+
+Take a number as defined previously.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+
+i = 0
+while i < len(s) and (s[i] < "0" or "9" < s[i]):
+  i = i + 1
+if i < len(s):
+  j = i
+  while j < len(s) and (s[j] >= "0" or "9" <= s[j]):
+    j = j + 1
+    k = j
+    while k < len(s) and (s[k] < "0" or "9" < s[k]):
+      k = k + 1
+    if i < len(s):
+      n = k
+      while n < len(s) and (s[n] >= "0" or "9" <= s[n]):
+        n = n + 1
+  print(s[k:n], k)

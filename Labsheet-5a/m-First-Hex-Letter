@@ -1,0 +1,25 @@
+Task:
+Standard input consists of s single positive integer, n.
+
+Write a python script named first-hex-letter.py whoch writes 
+the first letter in the hexadecimal representation of n to 
+standard output.
+
+Your script should produce no output if n does not contain such 
+a digit.
+
+Solution:
+
+#!/usr/bin/env python3
+
+n = int(input())
+
+hex = hex(n)[2:]
+
+hex = str(hex)
+
+i = 0
+while i < len(hex) and ("0" <= hex[i] and hex[i] <= "9"):
+  i = i + 1
+if i < len(hex):
+  print(hex[i])

@@ -1,0 +1,14 @@
+Task:
+Write a python script named wisconsin-1.py which writes the 
+name of each city in Wisconsin to standard output, one per line.
+
+Example Output:
+Wisconsin Dells
+Wausau
+
+** The two-letter code for Wisconsin is WI.
+All od the state codes are exactly two-characters long, and 
+there are no extraneous space characters in the input. **
+
+Solution:
+

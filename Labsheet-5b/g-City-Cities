@@ -1,0 +1,15 @@
+Task:
+The last word in some of the city names is "City"; for example, 
+Salt Lake City.
+
+Write a python script named city-cities.py which writes only 
+the name of each such city to standard output.
+
+Example output:
+Valley City
+Salt Lake City
+
+** This is easiest if you find the first comma, and then look backwards from there. **
+
+Solution:
+

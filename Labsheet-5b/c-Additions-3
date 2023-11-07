@@ -1,0 +1,49 @@
+Task:
+Standard input consists of a sequence of additions, one per 
+line.
+
+Write a python script named additions-3.py which writes the 
+resultion sum to standard output.
+
+Stop when you encounter the first sum which is exactly 1000.
+
+Example input:
+28371+197
+30+30813
+5+197
+32682+3
+18291+12
+500+500
+
+Example output:
+28568
+30843
+202
+32685
+18303
+1000
+
+** As in the first task, each addition involves exactly two 
+integer terms. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+reached_1000 = False
+while not reached_1000:
+  s = input()
+  total_sum = 0
+  current_num = 0
+  i = 0
+  while i < len(s):
+    if "0" <= s[i] and s[i] <= "9":
+      current_num = current_num * 10 + int(s[i])
+    if s[i] == "+":
+      total_sum = total_sum + current_num
+      current_num = 0
+    i = i + 1
+  total_sum = total_sum + current_num
+  print(total_sum)
+  if total_sum == 1000:
+    reached_1000 = True

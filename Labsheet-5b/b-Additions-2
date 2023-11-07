@@ -1,0 +1,32 @@
+Task:
+Standard input consists of a single addition on a single line 
+involving exactly five integer terms.
+
+Write a python script named additions-2.py which writes the 
+resulting sum to standard output.
+
+Example input:
+271+9730+30+813+5
+
+Example output:
+10849
+
+** Your solution must involve exactly two while loops, one 
+nested inside the other. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+total = 0
+i = 0
+j = 0
+while j < len(s):
+  while j < len(s) and ("0" <= s[j] and s[j] <= "9"):
+    i = i * 10 + int(s[j])
+    j = j + 1
+  total = total + i
+  i = 0
+  j = j + 1
+print(total)

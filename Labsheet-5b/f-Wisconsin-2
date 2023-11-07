@@ -1,0 +1,9 @@
+Task:
+Write a python script named wisconsin-2.py which writes only a 
+count of the number of cities in Wisconsin to standard output.
+
+Example Output:
+2
+
+Solution:
+

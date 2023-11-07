@@ -1,0 +1,55 @@
+Task:
+Standard input consists of a sequence ten additions, one per 
+line.
+
+See the example, below, for the format.
+
+Write a python script named additions-1.py which, for each 
+addition, writes the resulting sum to standard output.
+
+All od the numbers are positive integers, and there is no 
+extraneous whitespace.
+
+Example input:
+28371+197
+30+30813
+5+197
+32682+3
+18291+12
+20260+311
+22448+16
+4061+27872
+2+9
+2005+22335
+
+Example output:
+28568
+30843
+202
+32685
+18303
+20571
+22464
+31933
+11
+24340
+
+** Your solution must involve exactly two while loops, one nested 
+inside the other.
+The outer loop simply counts to ten, and the inner loop is linear 
+search **
+
+Solution:
+
+#!/usr/bin/env python3
+
+i = 0
+while i < 10:
+  s = input()
+  j = 0
+  while j < len(s) and (s[j] != "+"):
+    first_num = s[:j + 1]
+    second_num = s[j + 1:]
+    j = j + 1
+  print(int(first_num) + int(second_num))
+  i = i + 1

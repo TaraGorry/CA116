@@ -1,0 +1,21 @@
+CSV fields:
+With CSV data, it is common that the first line is a header.
+
+The header describes the meaning of each field.
+
+Task:
+Write a python script named csv-fields.py which writes the name of each header field to standard output.
+
+Example standard input:
+City,State,LatD,LatM,LatS,NS,LonD,LonM,LonS,EW
+Example standard output
+City
+State
+LatD
+LatM
+LatS
+NS
+LonD
+LonM
+LonS
+EW

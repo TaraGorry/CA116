@@ -1,0 +1,57 @@
+Task:
+Standard input consists of:
+ - first a sequence of CSV values (one per line, termainated by "end")
+ - the a single integer.
+
+Write a python script named print-csv-fields.py which, for each CSV line, outputs only the field indicated by the final integer.
+
+Example input 1:
+Los Angeles,34°03′N,118°15′W
+New York City,40°42′46″N,74°00′21″W
+Paris,48°51′24″N,2°21′03″E
+end
+0
+
+Example output 1:
+Los Angeles
+New York City
+Paris
+
+Example input 2:
+Los Angeles,34°03′N,118°15′W
+New York City,40°42′46″N,74°00′21″W
+Paris,48°51′24″N,2°21′03″E
+end
+1
+
+Example output 2:
+34°03′N
+40°42′46″N
+48°51′24″N
+
+#!/usr/bin/env python3
+
+s = input()
+a = []
+while s != "end":
+  a.append(s)
+  s = input()
+
+n = int(input())
+i = 0
+while i < len(a):
+  j = i
+  line = a[i]
+  while j < len(line) and line[j] != ",":
+    j = j + 1
+  if n == 0:
+    print(line[:j])
+  elif n == 1 or n == 2:
+    k = j + 1
+    while k < len(line) and line[j] != ",":
+      k = k + 1
+    if n == 1:
+      print(line[j + 1:k])
+    else:
+      print(line[k + 1:])
+  i = i + 1

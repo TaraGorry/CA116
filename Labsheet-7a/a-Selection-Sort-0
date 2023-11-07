@@ -1,0 +1,44 @@
+Task:
+Standard input consists of a non-empty sequence of integers 
+terminated by a line containing only text "end".
+
+Write a python script named selection-sort-0.py which reads 
+those integers into a list, and then writes only the smallest 
+element in that list to standard output.
+
+** It is not strictly necessary to read the values into a list here, because you can find the smallest element in a sequence in one pass.
+You should nevertheless do so, as this task is perparatory to other selection-sort tasks which absolutely do require that data to be read into a list. **
+
+Example input:
+49
+32
+39
+31
+30
+12
+14
+19
+13
+31
+end
+
+Example output:
+12
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+t = input()
+while t != "end":
+  a.append(int(t))
+  t = input
+
+p = 0
+j = 1
+while j < len(a):
+  if a[j] < a[p]:
+    p = j
+  j = j + 1
+print(a[p])

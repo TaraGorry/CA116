@@ -1,0 +1,65 @@
+Task:
+Standard input consists of a sequence of lines terminated by 
+a line containing only the text "end". Each line contains a 
+person's date of birth followed by their name.
+
+Write a python script named sorted-by-age.py which writes each person's name to standard output, ordered by their date of birth.
+
+** You should assume the following:
+  - The day, month and year of birth are always given with exactlt two digits; so somebody born on the eighth of the month, the day will be 08 (never just 8).
+  - The lines do not contain any extraneous whitespace; so, the first character of each person's name is always at position 9. **
+
+Example input:
+08/01/35 Elvis Presley
+01/02/68 Lisa Marie Presley
+24/05/41 Robert Allen Zimmerman
+05/05/88 Adele Laurie Blue Adkins
+18/12/75 Sia Kate Isobelle Furler
+01/03/94 Justin Bieber
+10/05/60 Paul David Hewson
+end
+
+Example output:
+Elvis Presley
+Robert Allen Zimmerman
+Paul David Hewson
+Lisa Marie Presley
+Sia Kate Isobelle Furler
+Adele Laurie Blue Adkins
+Justin Bieber
+
+** Do not rush into this task; think about it.
+A good solution does not require any change to your sorting algorithm at all.
+It is sometimes better to manipulate that data to fit the logic, rather than changing the logic itself. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+t = input()
+while t != "end":
+  a.append(t)
+  t = input()
+
+i = 0
+names = len(a)
+b = []
+while i < names:
+  p = 0
+  j = 1
+  i = i + 1
+  while j < len(a):
+    if a[j][6:8] < a[p][6:8]:
+      p = j
+    elif a[j][6:8] == a[p][6:8]:
+      if a[j][0:2] < a[p][0:2]:
+        p = j
+    j = j + 1
+  b.append(a[p][9:])
+  a.pop(p)
+
+k = 0
+while k < len(b):
+  print(b[k])
+  k = k + 1

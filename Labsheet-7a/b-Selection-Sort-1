@@ -1,0 +1,46 @@
+Task:
+Standard input consists of a non-empty sequence of integers 
+terminated by a line containing only the text "end", as before.
+
+Write a python script named selection-sort-1.py which reads 
+those integers into a list, and the writes only the position 
+of the smallest element in that list to standard output.
+
+In the case of duplicate smallest values, then prefer lowest-numbered position.
+
+Example Input:
+49
+32
+39
+31
+30
+12
+14
+19
+13
+31
+end
+
+Example Output:
+5
+
+** Above the element at position 5 (which is 12) is the smallest value in the list.
+It is not technically nescessary to use a list to complete this task; however, you must nevertheless do so. It matters for subsequent tasks. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+t = input()
+while t != "end":
+  a.append(t)
+  t = input()
+
+p = 0
+j = 1
+while j < len(a):
+  if a[j] < a[p]:
+    p = j
+  j = j + 1
+print(p)

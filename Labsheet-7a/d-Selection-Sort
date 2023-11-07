@@ -1,0 +1,54 @@
+Task:
+Standard input consists of a sequence of integers terminated 
+by a line containing only the text "end".
+
+Write a python script named selection-sort.py which outputs 
+those numbers in increasing numerical order.
+
+Your solution muct make good use of the selection-sort algorithm.
+
+Example Input:
+49
+32
+39
+31
+30
+12
+14
+9
+13
+31
+end
+
+Example Output:
+9
+12
+13
+14
+30
+31
+31
+32
+39
+49
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+t = input()
+while t != "end":
+  a.append(int(t))
+  t = input()
+
+i = 0
+while i < len(a):
+  p = 0
+  j = 1
+  while j < len(a):
+    if a[j] < a[p]:
+      p = j
+    j = j + 1
+  print(a[p])
+  a.pop(p)

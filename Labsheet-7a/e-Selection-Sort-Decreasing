@@ -1,0 +1,52 @@
+Task:
+Repeat the previous task, this time:
+ - naming your script selection-sort-reverse.py
+ - sorting the input into decreasing order.
+
+Example input:
+49
+32
+39
+31
+30
+12
+14
+9
+13
+31
+end
+
+Example output:
+49
+39
+32
+31
+31
+30
+14
+13
+12
+9
+
+** This task should not take too long to complete; if it takes longer than two minutes, then you are doing it wrong. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+t = input()
+while t != "end":
+  a.append(int(t))
+  t = input()
+
+i = 0
+while i < len(a):
+  p = 0
+  j = 1
+  while j < len(a):
+    if a[i] > a[p]:
+      p = j
+    j = j + 1
+  print(a[p])
+  a.pop(p)

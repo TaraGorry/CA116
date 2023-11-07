@@ -1,0 +1,27 @@
+Task:
+Assume an existing list of strings named a.
+
+Write a python fragment named non-empty-2.py which writes the first non-empty string in a to standard output.
+
+Your fragment should produce no output if a does not contain a non-empty string.
+
+Example list:
+a = ["", "", "dog", "", "", "cat", "", "", "", "mouse"]
+
+Example output:
+dog
+
+** Linear search. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+if __name__ == "__main__":
+  a = ["", "", "dog", "", "", "cat", "", "", "", "mouse"]
+
+i = 0
+while i < len(a) and s[i] == "":
+  i = i + 1
+if i < len(a):
+  print(a[i])

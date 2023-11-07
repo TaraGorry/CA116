@@ -1,0 +1,25 @@
+Task:
+Assume an existing list of strings named a.
+
+Write a python fragment named non-empty-1.py which writes a count of the number of non-empty strings in a to standard output.
+
+Example list:
+a = ["", "", "dog", "", "", "cat", "", "", "", "mouse"]
+
+Example output:
+3
+
+Solution:
+
+#!/usr/bin/env python3
+
+if __name__ == "__main__":
+  a = ["", "", "dog", "", "", "cat", "", "", "", "mouse"]
+
+count = 0
+i = 0
+while i < len(a):
+  if a[i] != "":
+    count = count + 1
+  i = i + 1
+print(count)

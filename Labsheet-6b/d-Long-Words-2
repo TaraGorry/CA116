@@ -1,0 +1,27 @@
+Task:
+Assume an existing list of words (strings) named a.
+
+Write a python fragment named long-words-2.py which writes the first long word in a to standard output.
+
+As before, take a long word to be any word with six or more characters.
+
+Your script should produce no output if a does not contain any long words.
+
+Example list:
+a = ["cat", "elephant", "mouse", "lizard", "horse", "mongoose"]
+
+Example output:
+elephant
+
+Solution:
+
+#!/usr/bin/env python3
+
+if __name__ == "__main__":
+  a = ["cat", "elephant", "mouse", "lizard", "horse", "mongoose"]
+
+i = 0
+while (i < len(a)) and (len(a[i]) < 6):
+  i = i + 1
+if i < len(a):
+  print(a[i])

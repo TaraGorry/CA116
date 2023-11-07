@@ -1,0 +1,28 @@
+Task:
+Assume an existion list of words (strings) named a.
+
+Write a python fragment named long-words-1.py which writes each 
+long word in a to standard output, one per line.
+
+Taks a long word to be any word with siz or more characters.
+
+Example list:
+a = ["cat", "elephant", "mouse", "lizard", "horse", "mongoose"]
+
+Example output:
+elephant
+lizard
+mongoose
+
+Solution:
+
+#!/usr/bin/env python3
+
+if __name__ == "__main__":
+  a = ["cat", "elephant", "mouse", "lizard", "horse", "mongoose"]
+
+i = 0
+while i < len(a):
+  if len(a[i]) >= 6:
+    print(a[i])
+  i = i + 1

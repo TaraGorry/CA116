@@ -1,0 +1,30 @@
+Task:
+Assume an existing non-empty list a.
+
+Write a python fragment named swap-first-and-last.py which swaps the first and last elements in a.
+
+Example list:
+a = [8, 9, 4, 7, 2, 11]
+
+Example list after execution:
+a = [11, 9, 4, 7, 2, 8]
+
+** The swap must be done in place, rearraging the elements of the existing list a.
+You should not create a new list.
+Your fragment should not write any output. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = ""
+
+i = 0
+while i < len(s):
+  x = s[0]
+  y = s[1:(len(s) - 1)]
+  x = s[len(s) - 1]
+  t = z + y + x
+  i = i + 1
+print(t)

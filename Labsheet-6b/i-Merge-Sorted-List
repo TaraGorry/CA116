@@ -1,0 +1,81 @@
+Task:
+Standard input consists of two lists of integers, both 
+individually sorted into increasing numerical order. Both 
+lists are terminated by a line containing only the text "end".
+
+Wriet a python script named merge-sorted-lists.py which writes 
+the numbers from both lists combined into sorted order to standard 
+output.
+
+Example Standard Input:
+2
+8
+23
+89
+end
+3
+23
+23
+67
+90
+end
+
+Example Standard Output:
+2
+3
+8
+23
+23
+23
+67
+89
+90
+
+** Tips:
+Do not sort the lists (e.g. using selecting sort). Selection 
+sort is O(n^2), whereas there is a simple and elegant O(n) 
+solution to this task.
+You will need to iterate over both lists at the same time.
+The start of your main loop will look something like this:
+i = 0
+j = 0
+while i < len(a) and j < len(b):
+  # Print either a[i] or b[i], depending upon which is the smaller; then increment either i or j, as approprite, but not both. 
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+a = []
+b = []
+
+s = input()
+while s != "end":
+  a.append(int(s))
+  s = input()
+
+s = input()
+while s != "end":
+  b.append(int(s))
+  s = input()
+
+i = 0
+j = 0
+while i < len(a) and j < len(b):
+  if a[i] < b[j]:
+    print(a[i])
+    i = i + 1
+  else:
+    print(b[j])
+    j = j + 1
+
+if len(a) != len(b):
+  if len(a) < len(b):
+    while j < len(b):
+      print(b[j])
+      j = j + 1
+  elif len(b) < len(a):
+    while i < len(a):
+      print(a[i])
+      i = i + 1

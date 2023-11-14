@@ -1,0 +1,30 @@
+Task:
+Assume an existing non-empty list a, and two existing integer variables i and j.
+
+Write a python fragment named swap-list-i-and-j.py which swaps the element in a at position i and j.
+
+Example list:
+a = [8, 9, 4, 7, 2, 11]
+i = 1
+j = 2
+
+Example list after execution:
+a = [8, 4, 9, 7, 2, 11]
+
+** As before, The swap must be done in place, rearranging the elements of the existing list a.
+You should not create a new list.
+Your fragment should not write any output. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+if __name__ == "__main__":
+  a = a = [8, 9, 4, 7, 2, 11]
+  i = 1
+  j = 2
+
+temp = a[i]
+p = a[j]
+a[j] = temp
+a[i] = p

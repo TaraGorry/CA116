@@ -1,0 +1,51 @@
+Task:
+Standard input consists of CSV data, with the first line being 
+a comma-separated header line.
+
+Assume a single command-line argument, being the name of one 
+of the header fields.
+
+Write a python script named csv-field-position.py which outputs 
+only the position of the indicated field.
+
+Example Invocation:
+python3 csv-field-position.py NS
+
+Example Standard Input:
+LatD,LatM,LatS,NS,LonD,LonM,LonS,EW,City,State
+41,5,59,N,80,39,0,W,Youngstown,OH
+42,52,48,N,97,23,23,W,Yankton,SD
+.
+.
+.
+
+Example Standard Output:
+3
+
+** The field "NS" is at position 3, counting from 0.
+For this task, we only care about the first line of the input.
+You should assume that a field with the indicated name exists.
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+name = sys.argv[1]
+
+s = input()
+a = []
+i = 0
+while i < len(s):
+  j = i
+  while j < len(s) and s[j] != ",":
+    j = j + 1
+  a.append(s[i:j])
+  i = i + 1
+
+i = 0
+while i < len(a):
+  if a[i] == name:
+    print(i)
+  i = i + 1

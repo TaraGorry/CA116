@@ -1,0 +1,90 @@
+Task:
+Standard input consists of CSV data, with the first line being 
+a comma-separated header line.
+
+Assume a single command-line argument, of the form 
+HEADER=VALUE.
+
+Write a python script named csv-select.py which outputs only 
+the CSV lines for which field named HEADER is equal to VALUE.
+
+Example Invocation:
+python3 csv-select.py State=NC
+
+Example Standard Input:
+LatD,LatM,LatS,NS,LonD,LonM,LonS,EW,City,State
+41,5,59,N,80,39,0,W,Youngstown,OH
+42,52,48,N,97,23,23,W,Yankton,SD
+46,35,59,N,120,30,36,W,Yakima,WA
+42,16,12,N,71,48,0,W,Worcester,MA
+43,37,48,N,89,46,11,W,Wisconsin Dells,WI
+36,5,59,N,80,15,0,W,Winston-Salem,NC
+49,52,48,N,97,9,0,W,Winnipeg,MB
+39,11,23,N,78,9,36,W,Winchester,VA
+34,14,24,N,77,55,11,W,Wilmington,NC
+end
+
+Example Standard Output:
+36,5,59,N,80,15,0,W,Winston-Salem,NC
+34,14,24,N,77,55,11,W,Wilmington,NC
+
+** 
+This is quite a big task, so implement it in steps:
+  1. First parse the command-line argument into a field and a 
+    value.
+  2. Then find the position of that field.
+  3. Then iterate through the rest of the data picking out 
+  that field.
+
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+header_value = sys.argv[1]
+
+i = 0
+while i < len(header_value) and header_value[i] != "=":
+  i = i + 1
+field = header_value[:i]
+value = header_value[i + 1:]
+
+a = []
+s = input()
+while s != "end":
+  line = []
+  prev = 0
+  i = 0
+  while i < len(s):
+    if i == len(s) - 1:
+      line.append(s[prev + 1:i + 1])
+    if s[i] == ",":
+      if prev == 0:
+        line.append(s[prev:i])
+      else:
+        line.append(s[prev + 1:i])
+      prev = i
+    i = i + 1
+  a.append(line)
+  s = input()
+
+i = 0
+while i < len(a[0]) and a[0][i] != field:
+  i = i + 1
+pos = i
+
+i = 1
+while i < len(a):
+  if a[i][pos] == value:
+    line = ""
+    j = 0
+    while j < len(a[i]):
+      if j == len(a[i]) - 1:
+        line = line + a[i][j]
+      else:
+        line = line + a[i][j] + ","
+      j = j + 1
+    print(line)
+  i = i + 1

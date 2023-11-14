@@ -1,0 +1,56 @@
+Constraints:
+Your solution to this task;
+  - May involve at most two while loops
+  - May not involve a nested while loop.
+As a consequence, your solution may not use selection sort.
+
+Task:
+Write a python script named counting-sort.py which reads a 
+sequence of integers from standard input, one per line, and 
+then writes those numbers to standard output in sorted order.
+
+Each integer is in the range 0 to 999 (inclusive).
+
+The input is terminated by a line containing only the text 
+"end".
+
+Example Standard Input:
+100
+50
+125
+4
+112
+end
+
+Example Standard Output:
+4
+50
+100
+112
+125
+
+** Make good use of the fact that the range of possible input 
+values is small. That is the key point in this task. **
+
+Solution:
+
+#!/usr/bin/env python3
+
+numbers = []
+i = 0
+n = input()
+while n != "end":
+  count = 0
+  numbers.append([i, count])
+  if int(n) <= i:
+    numbers[int(n)][1] = numbers[int(n)][1] + 1
+    n = input()
+  i = i + 1
+
+i = 0
+while i < len(numbers):
+  if 0 < numbers[i][0]:
+    print(str(numbers[i][0]))
+    numbers[i][1] = numbers[i][1] - 1
+    i = i - 1
+  i = i + 1

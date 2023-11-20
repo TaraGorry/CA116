@@ -1,0 +1,38 @@
+Task:
+Following the timetable data, standard input contains exactly 
+one additional line containing an integer, specifically a day 
+of the week. Call this "day".
+
+Write a python script named tt-day.py which, for each timetable 
+entry, writes only the timetable lines for "day" to standard 
+output.
+
+Example Standard Input:
+2 14 2 ca200 l114 Quantitative Analysis for Business Decisions
+2 09 1 ca227 l101 Business Data Management I
+3 11 2 ca277 lg26 Programming Fundamentals I
+4 10 2 ca227 c114 Business Data Management I
+end
+2
+
+Example Standard Output:
+2 14 2 ca200 l114 Quantitative Analysis for Business Decisions
+2 09 1 ca227 l101 Business Data Management I
+
+Solution:
+
+#!/usr/bin/env python3
+
+timetable = []
+line = input()
+while line != "end":
+  timetable.append(line)
+  line = input()
+
+day = input()
+i = 0
+while i < len(timetable):
+  tokens = timetable[i].split()
+  if tokens[0] == day:
+    print(" ".join(tokens[0:]))
+  i = i + 1

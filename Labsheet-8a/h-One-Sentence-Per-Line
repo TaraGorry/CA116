@@ -1,0 +1,52 @@
+Task:
+Standard input consists of a sequence of lines of text, 
+terminated by a line containing only "end".
+
+Write a python script named one-sentence-per-line.py which 
+writes each sentence encountered to standard output on a 
+separate line.
+
+Sentences are terminated by full stops; you need not consider 
+question marks, exclamation marks, and so on.
+
+Example Standard Input:
+Mary
+   had
+a
+little lamb. Its      fleece was white as snow.And everywhere
+that
+
+   Mary went.
+the lamb
+was                      sure to
+
+go.
+
+end
+
+Example Standard Output:
+Mary had a little lamb.
+Its fleece was white as snow.
+And everywhere that Mary went.
+the lamb was sure to go.
+
+Solution:
+
+#!/usr/bin/env python3
+
+s = input()
+t = ""
+while s != "end":
+  t = t + " " + s
+  s = input()
+
+t = " ".join(t.split()).split(".")
+
+i = 0
+while i < len(t):
+  if len(t[i]) > 0:
+    if t[i][0] == " ":
+      t[i] = t[i][1:]
+  if t[i] != "":
+    print(t[i] + ".")
+  i = i + 1

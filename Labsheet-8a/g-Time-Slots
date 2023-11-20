@@ -1,0 +1,44 @@
+Task:
+Write a python script named tt-time-slot.py which, for each 
+timetable entry, refromats the start time and adds an additional 
+column, the end time.
+
+Events end 10 minutes before the hour.
+
+Consider what happens with events which extend over midnight (unlikely, prehaps, but why not?)
+
+Omit the duration column in the output.
+
+Example Standard Input:
+1 10 1 ca277 lg26 Programming Fundamentals I
+1 11 2 ca222 qg27 Enterprise Information Systems
+1 14 1 ca277 lg26 Programming Fundamentals I
+1 15 1 ca200 qg22 Quantitative Analysis for Business Decisions
+end
+
+Example Standard Output:
+1 10:00 10:50 ca277 lg26 Programming Fundamentals I
+1 11:00 12:50 ca222 qg27 Enterprise Information Systems
+1 14:00 14:50 ca277 lg26 Programming Fundamentals I
+1 15:00 15:50 ca200 qg22 Quantitative Analysis for Business Decisions
+
+Solution:
+
+#!/usr/bin/env python3
+
+timetable = []
+line = input()
+while line != "end":
+  timetable.append(line)
+  line = input()
+
+i = 0
+while i < len(timetable):
+  tokens = timetable[i].split()
+  hour = tokens[1]
+  if hour[:1] == "0":
+    hour = hour[1:]
+  duration = str(int(tokens[1]) + int(tokens[2]) - 1)
+  start = tokens[0] + " " + hour + ":00"
+  print(start + " " + duration + ":50" + " " + " ".join(tokens[3:]))
+  i = i + 1

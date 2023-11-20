@@ -1,0 +1,34 @@
+Task:
+Write a python script named tt-labs.py which writes only each 
+lab event to standard output.
+
+Assume for the purpose of this task that lectures are always 
+exactly one-hour long and labs are always longer.
+
+Example Standard Input:
+1 10 1 ca277 lg26 Programming Fundamentals I
+1 11 2 ca222 qg27 Enterprise Information Systems
+1 14 1 ca277 lg26 Programming Fundamentals I
+1 15 3 ca200 qg22 Quantitative Analysis for Business Decisions
+end
+
+Example Standard Output:
+1 11 2 ca222 qg27 Enterprise Information Systems
+1 15 3 ca200 qg22 Quantitative Analysis for Business Decisions
+
+Solution:
+
+#!/usr/bin/env python3
+
+timetable = []
+line = input()
+while line != "end":
+  timetable.append(line)
+  line = input()
+
+i = 0
+while i < len(timetable):
+  tokens = timetable[i].split()
+  if tokens[2] > "1":
+    print(" ".join(tokens[0:]))
+  i = i + 1

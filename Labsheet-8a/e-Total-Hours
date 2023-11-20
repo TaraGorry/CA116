@@ -1,0 +1,35 @@
+Task:
+Write a python script named tt-total-hours.py which writes 
+only the total number of timetabled hours to standard output.
+
+The third column is the number of timetabled hours for each 
+event.
+
+Example Standard Input:
+1 10 1 ca277 lg26 Programming Fundamentals I
+1 11 2 ca222 qg27 Enterprise Information Systems
+1 14 1 ca277 lg26 Programming Fundamentals I
+1 15 1 ca200 qg22 Quantitative Analysis for Business Decisions
+end
+
+Example Standard Output:
+5
+
+Solution:
+
+#!/usr/bin/env python3
+
+timetable = []
+line = input()
+while line != "end":
+  timetable.append(line)
+  line = input()
+
+total_hours = 0
+i = 0
+while i < len(timetable):
+  tokens = timetable[i].split()
+  total_hours = total_hours + int(tokens[2])
+  i = i + 1
+  
+print(total_hours)

@@ -1,0 +1,60 @@
+Task:
+The current working directory contains a file named 
+translation.txt. That file defines word translations.
+
+Each line contains two words; the first word translates to the 
+second word.
+
+Write a python script named wors-translation.py which reads a 
+sequence of words from standard input (one per line) and, for each word, outputs the translated word.
+
+Example translation.txt:
+one eins
+two zwei
+three drei
+four vier
+five funf
+six sechs
+seven sieben
+eight acht
+nine neun
+ten zehn
+
+Example Standard Input:
+one
+three
+seven
+one
+
+Example Standard Output:
+eins
+drei
+sieben
+eins
+
+**
+This task is the same as the previous task except that, in this case, you cannot hard-wird the translation into your script, you must instead read the translation from a file.
+The Einstein marker tests French too.
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+file = "translation.txt"
+translation = {}
+
+with open(file) as f:
+  i = 0
+  while i < len(file):
+    t = f.readline().split()
+    if t != []
+      translation[t[0]] = t[1]
+    i += 1
+
+s = sys.stdin.readline().rstrip()
+while 0 < len(s):
+  if s in translation:
+    print(translation[s])
+  s = sys.stdin.readline.rstrip()

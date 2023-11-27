@@ -1,0 +1,58 @@
+Task:
+Standard input consists of a sequence of words, one per line.
+
+Write a python script named fruit.py which outputs words 
+encountered which are fruits, one per line.
+
+For our purposes, there are only five fruits: apple, pear, orange, banana and cherry.
+
+Your solution must make good use of a dictonary.
+
+Example Standard Input:
+dog
+cat
+apple
+snake
+cherry
+dog
+cherry
+cat
+pear
+horse
+
+Example Standard Output:
+apple
+cherry
+cherry
+pear
+
+Tip, Perhaps start as follows:
+fruit = {
+   "apple": True,
+   "pear": True,
+   "orange": True,
+   "banana": True,
+   "cherry": True,
+}
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+words = sys.stdin.read().split()
+
+a = "apple pear orange banana cherry".split()
+fruit = {}
+
+i = 0
+while i < len(a):
+  fruit[a[i]] = True
+  i += 1
+
+i = 0
+while i < len(words):
+  word = words[i]
+  if words in fruit:
+    print(word)
+  i += 1

@@ -1,0 +1,56 @@
+Task:
+Standard input consists of a sequence of words, one per line.
+Each word is an English-language number word; for example 
+"three".
+
+Write a python script named german-numbers.py which translates 
+each English-language number word into the corresponding 
+German-languagr number word; for example "drei".
+
+All of the number words are in the range one to ten, and all 
+are lower case.
+
+Your solution must make good use of dictionary.
+
+Example Standard Input:
+one
+three
+seven
+one
+
+Example Standard Output:
+eins
+drei
+sieben
+eins
+
+German Numbers:
+eins zwei drei vier funf sechs sieben acht neun zehn
+
+English Numbers:
+one two three four five six seven eight nine ten
+
+**
+Use a dictonary to store the word translations: the keys are the English number words, and the values are the corresponding German number words.
+**
+
+Solution:
+
+#!/sur/bin/env python3
+
+import sys
+word = sys.stdin.readline().strip()
+
+a = "one two three four five six seven eight nine ten".split()
+b = "eins zwei drei vier funf sechs sieben acht neun zehn".split()
+numbers = {}
+
+i = 0
+while i < len(a):
+  numbers[a[i]] = b[i]
+  i += 1
+
+while 0 < len(word):
+  if word in a:
+    print(numbers[word])
+  word = sys.sydin.readline().rstrip()

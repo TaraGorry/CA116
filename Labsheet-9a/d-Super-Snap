@@ -1,0 +1,59 @@
+Background:
+Super snap is like the game snap except that the matching cards 
+(or words, in out case) need not be adjacent; there may be 
+intervening cards (or words).
+
+Task:
+Standard input consists of a sequencs of words, one per line.
+
+Write a python script named super-snap.py which outputs the message indicated in the first example below when it encounters the first super snap.
+
+Your script should produce no output if no super snap is encountered.
+
+Example Standard Input 1:
+rabbit
+dog
+cat
+mouse
+elephant
+dog
+cat
+
+Example Standard Output 1:
+snap: dog
+
+Example Standard Input 2:
+rabbit
+dog
+cat
+mouse
+elephant
+mole
+sheep
+goat
+
+Example Standard Output 2 (empty):
+# Do not produce any output at all.
+
+**
+Your solution to this problem can be structured in several ways; however, fundamentally, it's always linear search.
+Use a dictionary to store the words which have been seen previously.
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+words = sys.stdin.readlines()
+seen = {}
+
+i = 0
+while i < len(words):
+  word = words[i].rstrip()
+  if word not in seen:
+    seen[word] = True
+  elif word in seen:
+    print("snap: " + word)
+    i = len(words)
+  i += 1

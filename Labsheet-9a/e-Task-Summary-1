@@ -1,0 +1,85 @@
+Task:
+Standard input consists of a sequence of lines. Each line contains 
+an upload result from Einstein.
+
+An upload result is a name constructed from a task name with 
+with ".correct" or ".incorrect" appended.
+
+The lines are in chronological order.
+
+A task is considered to have been successfully completed only 
+if the last upload for that task is correct.
+
+Write a python scriot named task-summary-1.py which outputs 
+only the names of the teaks which have been successfully 
+completed, one per line.
+
+Each line contains exactlt two "." characters, one for the 
+extension (.py, in the example) and one for the result 
+(e.g. .correct).
+
+Example Standard Input 1:
+count-up-to-odd.py.incorrect
+count-up-to.py.correct
+add.py.incorrect
+concat-lines.py.correct
+add.py.correct
+count-up-to-odd.py.correct
+add.py.incorrect
+less-than.py.correct
+
+Example Standard Output 1:
+concat-lines.py
+count-up-to-odd.py
+count-up-to.py
+less-than.py
+
+Example Standard Input 2:
+a.py.correct
+b.py.incorrect
+c.py.correct
+c.py.incorrect
+d.py.incorrect
+d.py.correct
+
+Example Standard Output 2:
+a.py
+d.py
+
+**
+Observe that c.py is missing in the ouput.
+Although this task was originally correct, it later became 
+incorrect.
+**
+
+**
+The order of the output lines does not matter.
+You a dictionary to store the current state of each task.
+The keys should be the task names.
+Use Booleans values to indicate whether the task has been completed successfilly.
+A good solutuon will not contain the literaly True and False.
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+lines = sys.stdin.readlines()
+correct = {}
+success = ".correct"
+
+i = 0
+while i < len(lines):
+  line = lines[i].rstrip()
+  if success in line:
+    line = line[0:len(line) - 8]
+    correct[line] = "correct"
+  else:
+    line[0:len(line) - 10]
+    correct[line] = "incorrect"
+  i += 1
+
+for task in correct:
+  if correct[task] = "correct":
+    print(task)

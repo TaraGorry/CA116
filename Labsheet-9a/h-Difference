@@ -1,0 +1,50 @@
+Task:
+The current working directory contains two files, a.txt and 
+b.txt, each containing a list of words, one per line.
+
+Write a python script named set-difference.py which outputs every word withc occors in a.txt but not in b.txt (without duplicates, and in no particular order).
+
+Example a.txt:
+dog
+hat
+mouse
+dog
+
+Example b.txt:
+dog
+mouse
+cat
+cat
+
+Example Standard Output:
+hat
+
+Solution:
+
+#!/usr/bin/env python3
+
+file_1 = "a.txt"
+file_2 = "b.txt"
+a = {}
+b = {}
+printed = {}
+
+with open(file_1) as f1:
+  word1 = f1.readlines()
+  i = 0
+  while i < len(word1):
+    if word1[i] not in a:
+      a[word1[i]] = True
+    i += 1
+
+with open(file_2) as f2:
+  word2 = f2.readlines()
+  i = 0
+  while i < len(word2):
+    if word2[i] not in b:
+      b[word2[i]] = True
+
+for word in a:
+  if (word not in b) and (word not in printed):
+    print(word.strip())
+    printed[word] = True

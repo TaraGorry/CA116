@@ -1,0 +1,51 @@
+Task:
+The current working directory contains two files, a.txt and 
+b.txt, each containing a list of words, one per line.
+
+Write a python script named set-intersection.py which outputs every word which occurs in both files (without duplicates, and in no particular order).
+
+Example a.txt:
+dog
+hat
+mouse
+dog
+
+Example b.txt:
+dog
+mouse
+cat
+cat
+
+Example Standard Output:
+dog
+mouse
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+file_1 = "a.txt"
+file_2 = "b.txt"
+a = {}
+b = {}
+
+with open(file_1) as f1:
+  word1 = f1.readlines()
+  i = 0
+  while i < len(word1):
+    if word1[i] not in a:
+      a[word1[i]] = True
+    i += 1
+
+with open(file_2) as f2:
+  word2 = f2.readlines()
+  i = 0
+  while i < len(word2):
+    if word2 not in b:
+      b[word2[i]] = True
+    i += 1
+
+for word in a:
+  if worf in b:
+    print(word.strip())

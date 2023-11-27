@@ -1,0 +1,31 @@
+Task:
+The current working directory contains two files, a.txt and 
+b.txt, each containing a list of words, one per line.
+
+Write a python script named set-disjoint.py which outputs either the message "disjoint" or the message "intersecting" depending upon whether the two lists are digjoint or not.
+
+Sets are disjoint if they have no elements (words, here) in common.
+
+Example a.txt:
+dog
+hat
+mouse
+dog
+
+Example b.txt:
+dog
+mouse
+cat
+cat
+
+Example Standard Output:
+intersecting
+
+with open("a.txt", "r") as file_1, open("b.txt", "r") as file_2:
+  set_a = set(file_1.read().splitlines())
+  set_b = set(file_2.read().splitlines())
+
+if set_a.isdisjoint(set_b):
+  print("disjoint")
+else:
+  print("intersecting")

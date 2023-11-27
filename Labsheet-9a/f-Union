@@ -1,0 +1,57 @@
+Task:
+The current working directory contains two files, a.txt and 
+b.txt, each containing a list of words, one per line.
+
+Write a python script named set-union.py which outputs every 
+word which occurs in either file (without duplicates, and in no particular order).
+
+Example a.txt:
+dog
+hat
+mouse
+dog
+
+Example b.txt:
+dog
+mouse
+cat
+cat
+
+Example Standard Output:
+dog
+hat
+mouse
+cat
+
+**
+Use a dictionary to store the words you have seen; the key should be the word, the associated values does not matter.
+The order of the output does not matter either. Einstein sorts the output itself.
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+file_1 = "a.txt"
+file_2 = "b.txt"
+union = {}
+
+with open(file_1) as f1:
+  words = f1.readlines()
+  i = 0
+  while i < len(words):
+    if words[i] not in union:
+      union[words[i]] = True
+    i += 1
+
+with open(file_2) as f2:
+  words = f2.readlines()
+  i = 0
+  while i < len(words):
+    if words[i] not in union:
+      union[words[i]] = True
+    i += 1
+
+for word in union:
+  print(word.strip())

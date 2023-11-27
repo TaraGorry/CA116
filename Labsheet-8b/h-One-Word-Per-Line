@@ -1,0 +1,39 @@
+Task:
+Standard input consists of a sequence of lines, and each line 
+consists of a sequence of whitespace-delimited words.
+
+Write a python script named one-word-per-line.py which writes 
+each of those words to standard output, one per line.
+
+Your solution must not use a loop.
+
+Example Standard Input:
+Mary had a little lamb,
+its fleece was white as snow.
+
+Example Standard Output:
+Mary
+had
+a
+little
+lamb,
+its
+fleece
+was
+white
+as
+snow.
+
+**
+Take a "word" to be a contiguous sequence of non-whitespace characters.
+
+There is a simple solution to this task which does not require the use of a while loop at all.
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+
+print(*sys.stdin.read().split, sep="\n")

@@ -1,0 +1,50 @@
+Task:
+The current working directory contains a file named 
+irish-dobs.txt. The format of that file is as indicated in the example below. Specifically, the dates of birth are in the Irish or European format, in which the day percedes the month.
+
+Write a python script named american-dobs.py which writes a new file named american-dobs.txt in which the month precedes the day (this is the American way of writing dates).
+
+Example Contents irish-dobs.txt (Your Input):
+8/1/35 Elvis Presley
+1/2/68 Lisa Marie Presley
+24/5/41 Robert Allen Zimmerman
+5/5/88 Adele Laurie Blue Adkins
+18/12/75 Sia Kate Isobelle Furler
+1/3/94 Justin Bieber
+1/5/60 Paul David Hewson
+
+Example contents american-dobs.txt (Your Output):
+1/8/35 Elvis Presley
+2/1/68 Lisa Marie Presley
+5/24/41 Robert Allen Zimmerman
+5/5/88 Adele Laurie Blue Adkins
+12/18/75 Sia Kate Isobelle Furler
+3/1/94 Justin Bieber
+5/1/60 Paul David Hewson
+
+**
+You will have to pick apart the contents of each line with str.split(), and then reassemble the output line in the required format with str.join().
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+input_file = "irish-dobs.txt"
+output_file = "american-dobs.txt"
+
+with open(input_file) as f_in:
+  with open(output_file, "w") as f_out:
+    lines = f_in.readline()
+    while 0 < len(lines):
+      a = lines.split()
+      date = a[0].split("/")
+      day = lines.split()[0].split("/")[0]
+      month = lines.split()[0].split("/")[1]
+      date[0] = month
+      date[1] = day
+      new_date = "/".join(a)
+      a[0] = new_date
+      form_lines = " ".join(a)
+      f_out.write(form_lines + "\n")
+      lines = f_in.readline()

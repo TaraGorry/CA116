@@ -1,0 +1,47 @@
+Task:
+Standard input consists of a sequence of integers, one per line.
+
+Write a python script named sum-integers-1.py which writes the 
+sum of those integers to standard output.
+
+Example Standard input:
+3
+10
+5
+7
+
+Example Standard Output:
+25
+
+**
+Note that there is no "end" marker in the input.
+Therefore, you cannot use the read-until-end or read-until-0 
+approach which we have used previously. You will have to use one of the file methods for reading from file objects.
+
+import sys
+
+s = sys.stdin.readline()
+
+OR
+
+a = sys.stdin.readlines()
+
+OR
+
+a = sys.stdin.read().split()
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+s = sys.stdin.readlines()
+
+total = 0
+i = 0
+while i < len(s):
+  total += int(s[i])
+  i += 1
+
+print(total)

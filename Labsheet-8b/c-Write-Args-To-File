@@ -1,0 +1,28 @@
+Task:
+Assume that the first command-line argument is a file name, 
+and that the remaining command-line arguments are words.
+
+Write a python script named write-args.py which writes each 
+word to the named file, one per line.
+
+Example Invocation:
+$ python3 write-args.py some-file.txt one two three
+
+Resulting Contents of some-file.txt:
+one
+two
+three
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+file_name = sys.argv[1]
+words = sys.argv[2:]
+
+with open(file_name, "w") as f:
+  i = 0
+  while i < len(words):
+    f.write(words[i] + "\n")
+    i += 1

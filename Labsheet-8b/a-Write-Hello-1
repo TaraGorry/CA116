@@ -1,0 +1,23 @@
+Task:
+Write a python script named write-hello-1.py which writes the 
+message indicated below into a file named hello.txt.
+
+Example invocation:
+$ python write-hellp-1.py
+
+Resulting contents of hello.txt:
+Hello world.
+
+** 
+Do no not omit a newline character at the end of the output.
+In python a string literal, "\n" denotes a newline character, for example: "hello\n" 
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+
+with open("hello.txt", "w") as f:
+  f.write("Hello world., \n")

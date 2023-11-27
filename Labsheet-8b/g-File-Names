@@ -1,0 +1,59 @@
+Task:
+Standard input consists of a sequence of file named, including 
+some leading directory names.
+
+Write a python script named file-names.py which, for each file,
+writes only the file-name component to standard output.
+
+Example Standard Input:
+tt-total-hours.py/tt-total-hours.py
+tt-wednesday.py
+tt-wednesday.py/tt-wednesday.py
+markers/use-dictionary.py
+/home/blott/teaching/ca277/markers/use-dictionary.py/dictionary.py
+/home/blott/teaching/ca277/markers/use-dictionary.py/test-2/dictionary.py
+who-won.py
+bubble-sort.web.ascii
+web/10-functions-tasks.ascii
+web/10-more-tasks.ascii
+11-real-io.ascii
+web/12-real-io-tasks.ascii
+/home/blott/teaching/ca277/web/13-pot-pourri.ascii
+use-dictionary.py/use-dictionary.py
+markers/user-names.py
+markers/user-names.py/user-names.py
+
+Example Standard Output:
+tt-total-hours.py
+tt-wednesday.py
+tt-wednesday.py
+use-dictionary.py
+dictionary.py
+dictionary.py
+who-won.py
+bubble-sort.web.ascii
+10-functions-tasks.ascii
+10-more-tasks.ascii
+11-real-io.ascii
+12-real-io-tasks.ascii
+13-pot-pourri.ascii
+use-dictionary.py
+user-names.py
+user-names.py
+
+**
+Use str.split("/").
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+a = sys.stdin.readlines()
+
+i = 0
+while i < len(a):
+  tokens = a[i].rstrip().split("/")
+  print(tokens.pop())
+  i += 1

@@ -1,0 +1,21 @@
+Task:
+Assume exactly one command-line argument, a file name.
+
+Write a python script named write-hello-2.py which writes the 
+message indicated below into the named file.
+
+Example Invocation:
+$ python write-hello-2.py some-file.txt
+
+Resulting contents of some-file.txt:
+Hello world.
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+file_name = sys.argv[1]
+
+with open(file_name, "w") as f:
+  f.write("Hello world.\n")

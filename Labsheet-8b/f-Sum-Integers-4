@@ -1,0 +1,52 @@
+Task:
+Assume that the command-line arguments are a sequence of file 
+named, and that each file conatins a whitespace-separated 
+sequence of integers.
+
+Write a python script named sum-integers-4.py which writes the 
+sum of all of those integers to standard output.
+
+Example Invocation:
+$ python3 sum-integers-4.py numbers-1.txt numbers-2.txt
+
+Example Contents of numbers-1.txt:
+3
+10 5
+7
+
+Example Contents of numbers-2.txt:
+2
+8 19 1
+
+Example Standard Output:
+55
+
+**
+If you choose the correct approach, then the solution to this task can be quite trivial.
+Consider all of the ways which you could represent the data integnally; one of them leads to a concise solution.
+**
+
+Solution:
+
+#!/usr/bin/env python3
+
+import sys
+args = sys.argv[1:]
+
+total = 0
+i = 0
+while i < len(args):
+  with open(args[i]) as f:
+    s = f.readlines()
+    j = 0
+    while j < len(s):
+      t = s[j].strip().split()
+      k = 0
+      while k < len(t):
+        value = int(t[k])
+        total += value
+        k += 1
+      j += 1
+  i += 1
+
+print(total)
